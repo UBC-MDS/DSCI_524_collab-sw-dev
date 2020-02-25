@@ -40,6 +40,16 @@ As you work through the tutorials below, fill out the missing data in the table 
 
 > Note: at the end of lecture I will post the answers to this table.
 
+## Tour de Python packages
+
+Some Python packages you may want to explore:
+
+1. [`convertempPy`](https://github.com/ttimbers/convertempPy) - a simple example package I built as a demo for this course 
+
+2. [`laserembeddings`](https://github.com/yannvgn/laserembeddings) - a Python package (uses the Poetry approach to creating Python packages)
+
+3. [`pandera`](https://github.com/pandera-dev/pandera) - a reviewed PyOpenSci Python package (uses more traditional approach to creating Python packages)
+
 ## The Whole Game in Python (30 min)
 
 ### Activity
@@ -56,6 +66,16 @@ Use this time to work on your Python package layout for your group project then 
 ## 5 min break - get up and move around!
 
 ---
+
+## Tour de R packages
+
+Some R packages you may want to explore:
+
+1. [`convertemp`](https://github.com/ttimbers/convertemp) - a simple example package I built as a demo for this course 
+
+2. [`broom`](https://github.com/tidymodels/broom) - an R package (uses the Poetry approach to creating Python packages)
+
+3. [`tidyhydat`](https://github.com/ropensci/tidyhydat) - a reviewed ROpenSci Python package
 
 ## The Whole Game in R (30 min)
 
