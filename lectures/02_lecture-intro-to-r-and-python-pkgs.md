@@ -50,6 +50,25 @@ Some Python packages you may want to explore:
 
 3. [`pandera`](https://github.com/pandera-dev/pandera) - a reviewed PyOpenSci Python package (uses more traditional approach to creating Python packages)
 
+## Poetry and the evolution of Python packaging
+
+If you want to package your Python code and distribute for ease of use by others on the Python Packaging Index (PyPI) you need to convert it to a standard format called Wheel. 
+
+Previously, to do this it was standard to have 4 configuration files in your package repository:
+
+- `setup.py`
+- `requirements.txt`
+- `setup.cfg`
+- `MANIFEST.in`
+
+In 2016, a new PEP ([518](https://www.python.org/dev/peps/pep-0518/)) was made. This PEP defined a new configuration format, `pyproject.toml`, whereby now a single file can be used in place of those previous four. This file must have at least two sections, `[build-system]` and `[tool]`.
+
+This new single configuration file has inspired some new tools to be created in the package building and management ecosystem in Python. One of the most recent and simplest to use is Poetry (created in 2018). When used to build packages, Poetry roughly does two things:
+
+1. Uses the `pyproject.toml` to manage and solve package configurations via the Poetry commands `init`, `add`, `config`, etc
+
+2. Creates a lock file (`poetry.lock`) which automatically creates and activates a virtual environment (if none are activated) where the Poetry commands such as `install`, `build`, `run`, etc are executed.
+
 ## The Whole Game in Python (30 min)
 
 ### Activity
