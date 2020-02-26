@@ -37,6 +37,8 @@ As you work through the tutorials below, fill out the missing data in the table 
 | Directory for tests for user-facing package functions  |               |              |
 | Directory for documentation                            |               |              |
 | Package metadata                                       |               |              |
+| File(s) that define the Namespace                      |               |              | 
+| Tool(s) for easy package creation                      |               |              |
 
 > Note: at the end of lecture I will post the answers to this table.
 
@@ -44,7 +46,7 @@ As you work through the tutorials below, fill out the missing data in the table 
 
 Some Python packages you may want to explore:
 
-1. [`foocat`](https://github.com/ttimbers/foocat) - 
+1. [`foocat`](https://github.com/ttimbers/foocat) - the end product of [the Whole Game Chapter](https://ubc-mds.github.io/py-pkgs/whole-game.html) from the Python Packages book
 
 1. [`convertempPy`](https://github.com/ttimbers/convertempPy) - a simple example package I built as a demo for this course 
 
@@ -94,7 +96,7 @@ Some R packages you may want to explore:
 
 1. [`foofactors`](https://github.com/jennybc/foofactors) - the end product of [the Whole Game Chapter](https://r-pkgs.org/whole-game.html) from the R Packages book.
 
-1. [`convertemp`](https://github.com/ttimbers/convertemp) - a simple example package I built as a demo for this course 
+1. [`convertempr`](https://github.com/ttimbers/convertempr) - a simple example package I built as a demo for this course 
 
 1. [`broom`](https://github.com/tidymodels/broom) - an R package (uses the Poetry approach to creating Python packages)
 
