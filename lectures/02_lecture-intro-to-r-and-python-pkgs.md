@@ -100,7 +100,7 @@ Some R packages you may want to explore:
 
 1. [`broom`](https://github.com/tidymodels/broom) - an R package (uses the Poetry approach to creating Python packages)
 
-1. [`tidyhydat`](https://github.com/ropensci/tidyhydat) - a reviewed ROpenSci Python package
+1. [`tidyhydat`](https://github.com/ropensci/tidyhydat) - a reviewed ROpenSci R package
 
 ## The Whole Game in R (30 min)
 
@@ -115,4 +115,12 @@ Use this time to work on your R package layout for your group project then based
 
 ## On-going lecture exercise solution
 
-> Note: to be added at the end of lecture
+| Description                                            | Python        | R            |
+|--------------------------------------------------------|---------------|--------------|
+| Online package repository or index                     | PyPI          | CRAN         |
+| Directory for user-facing package functions            | Package directory (a named directory within the project root that contians `.py` files and a `__init__.py` file) | `R` directory 
+| Directory for tests for user-facing package functions   | `tests`      | `tests/testthat` |
+| Directory for documentation                             | `docs`       | `man` and `vignettes` |
+| Package metadata                                        | `pyproject.toml` | `DESCRIPTION` |
+| File(s) that define the Namespace                      | `__init__.py`     | `NAMESPACE`         | 
+| Tool(s) for easy package creation                      |  Cookiecutter & Poetry | `usethis` & `devtools` |
