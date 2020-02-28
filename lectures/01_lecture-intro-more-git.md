@@ -150,6 +150,10 @@ Readings:
 - [Configuring protected branches - GitHub help](https://help.github.com/en/github/administering-a-repository/configuring-protected-branches)
 - [Best practices for protected branches](https://github.community/t5/Support-Protips/Best-practices-for-protected-branches/ba-p/10224).
 
+#### How to accept a pull request on a GitHub repository that has master branch protection
+
+video: <https://youtu.be/kOE6b8zpfCY>
+
 ### Exercise: Setting up master branch protection
 
 We are going to practice setting up master branch protection. Once we set this up on our play repository linked to below, we will practice branching and pull requests to send changes to the master branch in a later exercise.
