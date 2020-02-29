@@ -1,3 +1,4 @@
+<!-- #region -->
 ## Lecture 1:
 
 By the end of this lecture, students should be able to:
@@ -14,3 +15,25 @@ By the end of this lecture, students should be able to:
 - Given a function and a unit test written in R, use `devtools` and `usethis` to create a small and simple R package
 - Given a function and a unit test written in Python, use a Cookiecutter template and `poetry` to create a small and simple Python package
 
+
+## Lecture 3: 
+By the end of this lecture, students should be able to:
+
+- Perform a code review that uses inline comments and suggested code fixes.
+- Define functional testing, and the following 3 types of functional testing:
+    - unit testing
+    - integration testing
+    - regression testing
+- Define code, test and branch coverage. Explain high coverage in each of these metrics is desired.
+- Employ a workflow that optimizes accurate code.
+- Use `pytest` and `testhat` to run a project's entire test suite
+- Explain how `pytest` and `testhat` find the test functions when they are asked to run a project's entire test suite
+
+## Lecture 4:
+By the end of this lecture, students should be able to:
+
+- Use `traceback`, `options(error = recover)`, and `browser` to debug R code
+- Use `traceback.print_tb`, `pdb.pm()` and `pdb.run` to debug Python code
+- Generate well formatted function and package-level documentation for R using Roxygen and `pkgdown`
+- Generate well formatted function and package-level documentation for Python packages using Sphinx & Read the Docs
+<!-- #endregion -->
