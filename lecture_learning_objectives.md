@@ -20,6 +20,7 @@ By the end of this lecture, students should be able to:
 By the end of this lecture, students should be able to:
 
 - Perform a code review that uses inline comments and suggested code fixes.
+- Write unit tests for complex objects (e.g., data frames, models, plots).
 - Define functional testing, and the following 3 types of functional testing:
     - unit testing
     - integration testing
