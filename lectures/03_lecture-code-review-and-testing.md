@@ -104,13 +104,15 @@ With your neighbour, discuss whether it always makes sense for software packages
 - Tests that check that recent changes to the code base do not break already implemented features.
 - This is done by running all (or a large) subset of tests that already exist after making changes to the code base to ensure they still all pass
 
-This is especially challenging in projects with a large code base when tests are split across many files and functions/code chunks. How can we do this? We can take advantage of using tools designed to automate this (e.g., `pytest` & `testthat`) and following their function/method, file & directory naming conventions & organization (more on this later in the lecture). 
+This is especially challenging in projects with a large code base when tests are split across many files and functions/code chunks. How can we do this? 
+
+We can take advantage of using tools designed to automate this (e.g., `pytest` & `testthat`) and following their function/method, file & directory naming conventions & organization (more on this later in the lecture). 
 
 ## Testing methods:
 
 ### Exercise: what are black box & white box testing
 
-Thinking back to the videos you watched before class, answer the following poll on on [sli.do](https://www.sli.do) using the code: `#524-L03`.
+Thinking back to the videos you watched before class, answer the following polls on on [sli.do](https://www.sli.do) using the code: `#524-L03`.
 
 
 ## Employing the following practices in your code development workflow helps you write accurate code:
@@ -135,11 +137,13 @@ Writing unit tests for a single value, vector or list is fairly straight forward
 ### General guidelings for testing data frames
 
 - Where possible, use functions designed specifically for this (e.g., `dplyr::all_equal` and `pandas.DataFrame.equals`).
+
 - If not possible, test for equality of important values (e.g., specific columns) and attributes (e.g., shape, column names, column type, etc) using the `expect_*` functions inside of `test_that` in R, or via assertions in Python.
 
 ### General guidelings for testing plot objects
 
 - Initial tests should be designed to test that plots have expected attributes (e.g., expected mark, correct mapping to axes, etc)
+
 - Once a desired plot is generated, visual regression tests can be used to ensure that further code refactoring does not change the plot function. Tools for this exist for R in the [`vdiffr`](https://github.com/r-lib/vdiffr) package. AFAIK the Python tools in this space have only been developed/used for GUI & web apps, perhpas they could be used for plots as well? I have not yet tried (nor found any examples of anyone who has).
 
 Consider this function, what tests might we write for it?
@@ -172,7 +176,12 @@ Let's see how we can get `ggplot2` object attributes by first creating an object
 
 ```R
 plot2d <- scatter2d(mtcars, hp, mpg)
+plot2d
 ```
+
+
+![png](03_lecture-code-review-and-testing_files/03_lecture-code-review-and-testing_28_0.png)
+
 
 Can we find the an attribute that tells us it has a `geom_point` attribute?
 
@@ -180,8 +189,18 @@ Can we find the an attribute that tells us it has a `geom_point` attribute?
 ```R
 #plot2d$layers
 #plot2d$layers[[1]]$geom
-#class(plot2d$layers[[1]]$geom)
+class(plot2d$layers[[1]]$geom)
 ```
+
+
+<ol class=list-inline>
+	<li>'GeomPoint'</li>
+	<li>'Geom'</li>
+	<li>'ggproto'</li>
+	<li>'gg'</li>
+</ol>
+
+
 
 Can we find the an attribute that tells us that the variables have been correctly mapped to the axes?
 
@@ -189,15 +208,23 @@ Can we find the an attribute that tells us that the variables have been correctl
 ```R
 # x-axes
 #plot$mapping$x
-#rlang::get_expr(plot$mapping$x)
+rlang::get_expr(plot$mapping$x)
 ```
+
+
+    hp
+
 
 
 ```R
 # y-axes
 #plot$mapping$y
-#rlang::get_expr(plot$mapping$y)
+rlang::get_expr(plot$mapping$y)
 ```
+
+
+    mpg
+
 
 Great, now we know enough that can write some basic tests for our function. This function will need a plot to test on, so we need to create that first within our `test_that` chunk.
 
@@ -225,7 +252,9 @@ test_that('Plot should use geom_point and map x to x-axis, and y to y-axis.', {
 ### But I have another type of object? How do I test it?
 
 If you don't know where to start writing tests for the object you plan to use or return in your function, try the following:
+
 - make such an object and interactively explore it
+
 - look at other packages that have functions and return the same kind of object, what do they test for?
 
 ## How testthat works:
@@ -242,6 +271,12 @@ This command is a shortcut for `testthat::test_dir()`, and it runs all the files
 
 ### Organizing tests for your R package:
 
+Let's explore the `reader` package!
+
+- https://github.com/tidyverse/readr
+
+### Organizing tests for your R package:
+
 Tests are organised hierarchically: **expectations** are grouped into **tests** which are organised in **files**:
 
 - An **expectation** is the atom of testing. It describes the expected result of a computation: Does it have the right value and right class? Does it produce error messages when it should? An expectation automates visual checking of results in the console. Expectations are functions that start with `expect_`.
@@ -252,7 +287,13 @@ Tests are organised hierarchically: **expectations** are grouped into **tests** 
 
 *Source: [R Packages, Chapter 10](https://r-pkgs.org/tests.html)*
 
-**Demonstration** of `devtools::test()` (time permitted)
+**Demonstration** of `pytest` (time permitted)
+
+## How pytest works:
+
+Let's explore the `pandas` package!
+
+- https://github.com/pandas-dev/pandas
 
 ## How pytest works:
 
@@ -287,4 +328,4 @@ Enter your answers on the [sli.do](https://www.sli.do) poll (`#DSCI-L03`) and I 
 ## Where are we headed next?
 
 - What is code coverage, why is it important and how do we measure it?
-- Upping our debiugging skills
+- Upping our debugging skills

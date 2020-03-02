@@ -1,3 +1,7 @@
+```python
+from IPython.display import HTML
+```
+
 ## DSCI 524 - Collaborative Software Development
 
 ### Lecture 1: Introduction & my goodness more git!
@@ -152,7 +156,21 @@ Readings:
 
 #### How to accept a pull request on a GitHub repository that has master branch protection
 
-video: <https://youtu.be/kOE6b8zpfCY>
+
+```python
+HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/kOE6b8zpfCY" frameborder="0" allowfullscreen></iframe>')
+```
+
+    /opt/anaconda3/lib/python3.7/site-packages/IPython/core/display.py:701: UserWarning: Consider using IPython.display.IFrame instead
+      warnings.warn("Consider using IPython.display.IFrame instead")
+
+
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kOE6b8zpfCY" frameborder="0" allowfullscreen></iframe>
+
+
 
 ### Exercise: Setting up master branch protection
 
@@ -197,6 +215,7 @@ You can think of branches as independent lines of development within a single re
 | create a new branch | `git branch <branch_name>` |
 | switch to a branch | `git checkout  <branch_name>` |
 | create a new branch & immediately switch to it | `git checkout -b <branch_name>` |
+| retrieve a branch you don't have locally on your laptop from GitHub| `git checkout --track origin/<branch_name` |
 | merge changes from another branch | `git merge <branch_name>` |
 | delete a local branch | `git branch -d <branch_name>` |
 | push changes to a remote branch | `git push origin <branch_name>` |
