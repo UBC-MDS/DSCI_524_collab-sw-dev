@@ -1,6 +1,6 @@
 ## DSCI 524 - Collaborative Software Development
 
-### Lecture 3: Code reviews, functional testing and advice for testing complex things
+### Lecture 3: Code reviews, testing and advice for testing complex things
 
 #### 2020-03-02
 
