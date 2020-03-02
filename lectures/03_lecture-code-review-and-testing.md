@@ -76,6 +76,12 @@ Was there anything we should have done differently with that code review?
 
 *Hint: if I didn't tell you that the top pilot was Han Solo, how would you have known that?*
 
+### How do you not accept a pull request?
+
+In some cases, it might not make sense to merge a pull request. To close a pull request that should not be merged, scroll to the bottom of the pull request page, and look for a gray "Closes pull request" button. This will end move the pull request to the closed pull requests section (similar to closed issues) and does not merge the changes. 
+
+<img src="img/close-pr.png" width=500>
+
 ## Some common and useful types of testing
 
 - unit testing
@@ -180,7 +186,7 @@ plot2d
 ```
 
 
-![png](03_lecture-code-review-and-testing_files/03_lecture-code-review-and-testing_28_0.png)
+![png](03_lecture-code-review-and-testing_files/03_lecture-code-review-and-testing_29_0.png)
 
 
 Can we find the an attribute that tells us it has a `geom_point` attribute?
