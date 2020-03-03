@@ -28,7 +28,7 @@ By the end of this lecture, students should be able to:
 - Employ a workflow that optimizes accurate code.
 - Write unit tests for complex objects (e.g., data frames, models, plots).
 - Use `pytest` and `testhat` to run a project's entire test suite
-- Explain how `pytest` and `testhat` find the test functions when they are asked to run a project's entire test suite
+- Explain how `pytest` and `testthat` find the test functions when they are asked to run a project's entire test suite
 
 ## Lecture 4:
 By the end of this lecture, students should be able to:
