@@ -33,7 +33,6 @@ By the end of this lecture, students should be able to:
 - Calculate code coverage in R and Python
 - Manage package dependencies in R and Python packages
 - Create a reprex to get help
-- How to use a reprex to get help
 - Use `traceback`, `options(error = recover)`, and `browser` to debug R code
 - Use `traceback.print_tb`, `pdb.pm()`, `code.interact()` and `pdb.run` to debug Python code
 
