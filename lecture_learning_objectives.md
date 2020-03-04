@@ -34,7 +34,7 @@ By the end of this lecture, students should be able to:
 - Manage package dependencies in R and Python packages
 - Create a reprex to get help
 - Use `traceback`, `options(error = recover)`, and `browser` to debug R code
-- Use `traceback.print_tb`, `pdb.pm()`, `code.interact()` and `pdb.run` to debug Python code
+- Use `traceback.print_last`, `pdb.postmortem` and `breakpoint` to debug Python code
 
 ## Lecture 5:
 By the end of this lecture, students should be able to:
