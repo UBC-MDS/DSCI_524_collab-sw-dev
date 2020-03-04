@@ -11,8 +11,8 @@ By the end of this lecture, students should be able to:
 - [Calculate code coverage in R and Python](#Calculating-coverage-in-Python)
 - [Manage package dependencies in R and Python packages.](#Dealing-with-other-package-dependencies-in-your-package)
 - [Create a reprex to get help](#Create-a-reprex-to-get-help)
-- Use `traceback`, `options(error = recover)`, and `browser` to debug R code
-- Use `traceback.print_last`, `pdb.pm` and `breakpoint` to debug Python code
+- [Use `traceback`, `options(error = recover)`, and `browser` to debug R code](#Debugging-tools-in-R-&-Python)
+- [Use `traceback.print_last`, `pdb.pm` and `breakpoint` to debug Python code](#Debugging-tools-in-R-&-Python)
 
 ## Coverage
 
@@ -274,7 +274,7 @@ So, should you use the pipe in your package? The answer is, it depends on your p
 
 *Source (images and R functions): [Jenny Bryan's rstudio::conf 2020 talk](https://resources.rstudio.com/rstudio-conf-2020/object-of-type-closure-is-not-subsettable-jenny-bryan)*
 
-### Using `traceback.print_tb` in Python
+### Using `print_last` in Python
 
 
 ```python
