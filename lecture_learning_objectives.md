@@ -19,22 +19,26 @@ By the end of this lecture, students should be able to:
 ## Lecture 3: 
 By the end of this lecture, students should be able to:
 
-- Perform a code review that uses inline comments and suggested code fixes.
+- Perform a code review that uses inline comments and suggested code fixes
 
 - Define the following 3 types of testing:
     - unit testing
     - integration testing
     - regression testing
 - Employ a workflow that optimizes accurate code.
-- Write unit tests for complex objects (e.g., data frames, models, plots).
+- Write unit tests for complex objects (e.g., data frames, models, plots)
 - Use `pytest` and `testhat` to run a project's entire test suite
 - Explain how `pytest` and `testthat` find the test functions when they are asked to run a project's entire test suite
 
 ## Lecture 4:
 By the end of this lecture, students should be able to:
-- Define code, test and branch coverage. Explain high coverage in each of these metrics is desired.
+- Define code, test and branch coverage. Explain why high coverage in each of these metrics is desired
+- Calculate code coverage in R and Python
+- Manage package dependencies in R and Python packages
+- Create a reprex to get help
+- How to use a reprex to get help
 - Use `traceback`, `options(error = recover)`, and `browser` to debug R code
-- Use `traceback.print_tb`, `pdb.pm()` and `pdb.run` to debug Python code
+- Use `traceback.print_tb`, `pdb.pm()`, `code.interact()` and `pdb.run` to debug Python code
 
 ## Lecture 5:
 By the end of this lecture, students should be able to:
