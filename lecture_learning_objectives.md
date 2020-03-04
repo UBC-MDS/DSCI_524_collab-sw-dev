@@ -1,6 +1,5 @@
 <!-- #region -->
 ## Lecture 1:
-
 By the end of this lecture, students should be able to:
 - Create project boards using GitHub and link tasks to issues
 - Create GitHub milestones to group related issues
@@ -18,9 +17,7 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 3: 
 By the end of this lecture, students should be able to:
-
 - Perform a code review that uses inline comments and suggested code fixes
-
 - Define the following 3 types of testing:
     - unit testing
     - integration testing
