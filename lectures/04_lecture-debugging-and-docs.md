@@ -1,6 +1,6 @@
 ## DSCI 524 - Collaborative Software Development
 
-### Lecture 4: Debugging and package documentation
+### Lecture 4: Code coverage, package deps & debugging
 
 #### 2020-03-04
 
@@ -183,6 +183,56 @@ Let's practice calculating coverage in Python!
 **When you are done step #4 indicate so on the [sli.do](https://www.sli.do) poll (`#524-L04`).**
 
 
+### How does `coverage` in Python actually count line coverage?
+
+- the output from `poetry run pytest --cov=big_abs` gives a table that looks like this:
+
+```
+---------- coverage: platform darwin, python 3.7.6-final-0 -----------
+Name                  Stmts   Miss  Cover
+-----------------------------------------
+big_abs/__init__.py       1      0   100%
+big_abs/big_abs.py        8      2    75%
+-----------------------------------------
+TOTAL                     9      2    78%
+```
+
+In the column labelled as "Stmts", coverage is calculating all possible line jumps that could have been executed (these line jumps are sometimes called arcs). 
+
+> Note - this leads coverage to count two statements on one line that are separated by a ";" (e.g., print("hello"); print("there")) as one statement, as well as calculating a single statement that is spread across two lines as one statement. 
+
+In the column labelled as "Miss", this is the number of line jumps not executed by the tests. 
+
+The coverage percentage in this scenario is calculated by:
+$$Coverage = \frac{Stmts - Miss}{Stmts}$$
+
+### How does `coverage` in Python actually branch coverage?
+
+- the output from `poetry run pytest --cov-branch --cov=big_abs` gives a table that looks like this:
+
+```
+---------- coverage: platform darwin, python 3.7.6-final-0 -----------
+Name                  Stmts   Miss Branch BrPart  Cover
+-------------------------------------------------------
+big_abs/__init__.py       1      0      0      0   100%
+big_abs/big_abs.py        8      2      6      3    64%
+-------------------------------------------------------
+TOTAL                     9      2      6      3    67%
+```
+
+In the column labelled as "Branch", coverage is actually counting the number of possible jumps from branch points.
+
+> Note: because coverage is using line jumps to count branches, each `if` inherently has an `else` even if its not explicitly written in the code.
+
+In the column labelled as "BrPart", this is the number of of possible jumps from branch points not executed by the tests.
+
+The branch coverage percentage in this tool is calculated by:
+
+$$Coverage = \frac{Branch + BrPart}{Stmts + Branch}$$
+
+So for `big_abs/big_abs.py` 64% was calculated from:
+$$Coverage = \frac{6 + 3}{8 + 6} * 100 = 64\%$$
+
 ### Exercise: Improve branch coverage
 
 Let's add some additional test cases to improve the branch coverage for the `big_abs` Python package!
@@ -268,13 +318,18 @@ So, should you use the pipe in your package? The answer is, it depends on your p
 
 |Task |    |  R  | Python |
 |-----|----|-----|--------|
-| <img src="img/traceback.png" width=200> | Look at the death certificate to get some general information about the death | `traceback` | `traceback.print_last` |
-| <img src="img/options.png" width=200> | Do a post mortem autopsy find further evidence of why it died  | `options(error = recover)` | `pdb.postmortem` |
-| <img src="img/browser.png" width=200> | Revive the dead so it may walk again |  `browser` | `breakpoint` |
+| <img src="img/traceback.png" width=100> | Look at the death certificate to get some general information about the death | `traceback` | `traceback.print_last` |
+| <img src="img/options.png" width=100> | Do a post mortem autopsy find further evidence of why it died  | `options(error = recover)` | `pdb.pm` |
+| <img src="img/browser.png" width=100> | Revive the dead so it may walk again |  `browser` | `breakpoint` |
 
 *Source (images and R functions): [Jenny Bryan's rstudio::conf 2020 talk](https://resources.rstudio.com/rstudio-conf-2020/object-of-type-closure-is-not-subsettable-jenny-bryan)*
 
 ### Using `print_last` in Python
+
+
+```python
+
+```
 
 
 ```python
@@ -288,9 +343,30 @@ x[3]
 ```
 
 
+    ---------------------------------------------------------------------------
+
+    IndexError                                Traceback (most recent call last)
+
+    <ipython-input-2-765df518d8c9> in <module>
+          1 x = [2, 4, 6]
+    ----> 2 x[3]
+    
+
+    IndexError: list index out of range
+
+
+
 ```python
 traceback.print_last()
 ```
+
+    Traceback (most recent call last):
+      File "/opt/anaconda3/lib/python3.7/site-packages/IPython/core/interactiveshell.py", line 3331, in run_code
+        exec(code_obj, self.user_global_ns, self.user_ns)
+      File "<ipython-input-2-765df518d8c9>", line 2, in <module>
+        x[3]
+    IndexError: list index out of range
+
 
 ## Using `pdb.postmortem` to do a postmortem
 
@@ -307,9 +383,33 @@ x[3]
 ```
 
 
+    ---------------------------------------------------------------------------
+
+    IndexError                                Traceback (most recent call last)
+
+    <ipython-input-5-765df518d8c9> in <module>
+          1 x = [2, 4, 6]
+    ----> 2 x[3]
+    
+
+    IndexError: list index out of range
+
+
+
 ```python
 pdb.pm()
 ```
+
+    > <ipython-input-5-765df518d8c9>(2)<module>()
+    -> x[3]
+    (Pdb) x
+    [2, 4, 6]
+    (Pdb) x[3]
+    *** IndexError: list index out of range
+    (Pdb) x[2]
+    6
+    (Pdb) q
+
 
 ### Using `breakpoint` in Python:
 
@@ -319,6 +419,48 @@ x = [2, 4, 6]
 breakpoint()
 x[3]
 ```
+
+    --Return--
+    > <ipython-input-7-ede97edf4895>(2)<module>()->None
+    -> breakpoint()
+    (Pdb) x
+    [2, 4, 6]
+    (Pdb) x[3]
+    *** IndexError: list index out of range
+    (Pdb) x[2]
+    6
+    (Pdb) q
+
+
+
+    ---------------------------------------------------------------------------
+
+    BdbQuit                                   Traceback (most recent call last)
+
+    <ipython-input-7-ede97edf4895> in <module>
+          1 x = [2, 4, 6]
+    ----> 2 breakpoint()
+          3 x[3]
+
+
+    /opt/anaconda3/lib/python3.7/bdb.py in trace_dispatch(self, frame, event, arg)
+         90             return self.dispatch_call(frame, arg)
+         91         if event == 'return':
+    ---> 92             return self.dispatch_return(frame, arg)
+         93         if event == 'exception':
+         94             return self.dispatch_exception(frame, arg)
+
+
+    /opt/anaconda3/lib/python3.7/bdb.py in dispatch_return(self, frame, arg)
+        152             finally:
+        153                 self.frame_returning = None
+    --> 154             if self.quitting: raise BdbQuit
+        155             # The user issued a 'next' or 'until' command.
+        156             if self.stopframe is frame and self.stoplineno != -1:
+
+
+    BdbQuit: 
+
 
 ## Create a reprex to get help
 
@@ -346,3 +488,14 @@ Enter your answers on the [sli.do](https://www.sli.do) poll (`#524-L04`) and I w
     - Documentation
     - Package versioning
     - Package publishing
+
+## Extra materials
+
+### Helper/internal functions in R
+- [Helper/internal functions in R](https://www.r-bloggers.com/internal-functions-in-r-packages/)
+- [Testing helper/internal functions in R](https://github.com/r-lib/covr/issues/301)
+
+
+```python
+
+```
