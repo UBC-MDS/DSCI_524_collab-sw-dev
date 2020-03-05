@@ -234,6 +234,10 @@ $$Coverage = \frac{Branch + BrPart}{Stmts + Branch}$$
 So for `big_abs/big_abs.py` 64% was calculated from:
 $$Coverage = \frac{6 + 3}{8 + 6} * 100 = 64\%$$
 
+## Want more details on the execution of Coverage?
+
+- see: https://coverage.readthedocs.io/en/coverage-4.0.3/howitworks.html#execution
+
 ### Exercise: Improve branch coverage
 
 Let's add some additional test cases to improve the branch coverage for the `big_abs` Python package!
