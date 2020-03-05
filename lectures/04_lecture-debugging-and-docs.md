@@ -205,6 +205,7 @@ In the column labelled as "Miss", this is the number of line jumps not executed 
 
 The coverage percentage in this scenario is calculated by:
 $$Coverage = \frac{Stmts - Miss}{Stmts}$$
+$$Coverage = \frac{8 - 2}{8} * 100 = 75\%$$
 
 ### How does `coverage` in Python actually branch coverage?
 
