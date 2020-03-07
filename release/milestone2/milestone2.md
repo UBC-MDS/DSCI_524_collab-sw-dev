@@ -84,10 +84,10 @@ In your team project submission, we will be looking for:
     - deploy your changes 
     - merge if your branch is not causing any problems    
 
-- Whether you have adequately documented your Python and R package `README.md` files including:
-  - usage and installation instructions
-  - functions
-  - tests
+- Whether you have adequately documented 
+   - your Python and R package README.md files 
+   - functions
+   - tests
   
 - Whether you are using GitHub issues, milestones, and project boards effectively or not. In particular, we expect you to set-up milestone 2 on GitHub and add relevant issues to it. You should also continue using the GitHub project board that was set up.
    
