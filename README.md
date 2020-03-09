@@ -15,6 +15,8 @@ By the end of the course, students are expected to be able to:
     - selecting software licenses that best suit the project
     - critically evaluating work of others and providing constructive feedback
 
+See [here](lecture_learning_objectives.md) for lecture-by-lecture learning objectives
+
 ## Course Format
 This is a project-based course where you will work collaboratively in groups to develop a Python and a R software package. In lecture and lab, we'll work on the skills and concepts that you need to learn to complete the project. 
 

@@ -38,6 +38,22 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 5:
 By the end of this lecture, students should be able to:
+- Define continuous integration testing
+- Explain why continuous integration testing is superior to manually running tests
+- Define the following key concepts that underlie GitHub Actions:
+    - Actions
+    - Workflow
+    - Event
+    - Runner
+    - Job
+    - Step
+- Store and use GitHub Actions credentials safely via GitHub Secrets
+- Use matrix GitHub Actions workflows to reduce workflow redundancy
+- Use GitHub Actions to set-up automated running of tests by `pytest` upon push to the master branch
+- Use GitHub Actions to set-up automated running of tests by `testthat` upon push to the master branch
+
+## Lecture 6:
+By the end of this lecture, students should be able to:
 - Generate well formatted function and package-level documentation for R using Roxygen and `pkgdown`
 - Generate well formatted function and package-level documentation for Python packages using Sphinx & Read the Docs
 <!-- #endregion -->
