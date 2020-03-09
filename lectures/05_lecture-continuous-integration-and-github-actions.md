@@ -56,6 +56,36 @@ You have already interacted with GitHub Actions in this class! We used it to:
 
 2. Generate a pull request in the [`review-my-pull-request` repo](https://github.com/ttimbers/review-my-pull-request) upon push to the "pr" branch: : <https://github.com/ttimbers/review-my-pull-request/blob/master/.github/workflows/pr.yml>
 
+### Polls made easier!
+
+I am still trying to find a better way to see where everyone is during these exercises, let's try answering them from inside your lecture notes today (thanks to Firas for figuring this out!):
+
+
+```python
+import IPython
+```
+
+
+```python
+poll = "https://app.sli.do/event/wim3yyiz"
+IPython.display.IFrame(poll, 500, 700)
+```
+
+
+
+
+
+<iframe
+    width="500"
+    height="700"
+    src="https://app.sli.do/event/wim3yyiz"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+
+
+
+
 ### Exercise: Getting to know GitHub Actions workflows
 
 We are going to each create our own GitHub Actions workflow. This workflow is a very simple toy example where we run some `echo` shell commands to print things to the runner's terminal.
@@ -88,6 +118,27 @@ We are going to each create our own GitHub Actions workflow. This workflow is a 
 
 
 **When you are done step #5 indicate so on the [sli.do](https://www.sli.do) poll (`#524-L05`).**
+
+
+```python
+poll = "https://app.sli.do/event/wim3yyiz/embed/polls/59a3bdc4-0bec-46d5-a861-eaa83d05907a"
+IPython.display.IFrame(poll, 500, 500)
+```
+
+
+
+
+
+<iframe
+    width="500"
+    height="500"
+    src="https://app.sli.do/event/wim3yyiz/embed/polls/59a3bdc4-0bec-46d5-a861-eaa83d05907a"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+
+
+
 
 ### GitHub Actions workflow file:
 
@@ -233,6 +284,27 @@ Let's answer the following questions to start better understanding the `build.ym
 
 4. What is the type of runner
 
+
+```python
+poll = "https://app.sli.do/event/wim3yyiz"
+IPython.display.IFrame(poll, 500, 700)
+```
+
+
+
+
+
+<iframe
+    width="500"
+    height="700"
+    src="https://app.sli.do/event/wim3yyiz"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+
+
+
+
 ## Storing and use GitHub Actions credentials safely via GitHub Secrets
 
 Some of the tasks we want to do in our workflows require authentication. However, the whole point of this is to automate this process - so how can we do that without sharing our authentication tokens, usernames or passwords in our workflow files?
@@ -262,6 +334,27 @@ Let's learn how to add secrets to a GitHub repository. We'll do this by adding o
 6. Add `CODECOV_TOKEN` as the secret name, and paste your token (which you copied from [codecov.io](https://codecov.io/)) as the value.
 
 **When you are done step #6 indicate so on the [sli.do](https://www.sli.do) poll (`#524-L05`).**
+
+
+```python
+poll = "https://app.sli.do/event/wim3yyiz"
+IPython.display.IFrame(poll, 500, 700)
+```
+
+
+
+
+
+<iframe
+    width="500"
+    height="700"
+    src="https://app.sli.do/event/wim3yyiz"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+
+
+
 
 ## Authenticating with the `GITHUB_TOKEN`
 
@@ -349,6 +442,26 @@ jobs:
         yml: ./codecov.yml 
         fail_ci_if_error: true
 ```
+
+#### Steps in English:
+
+1. ?
+
+2. ?
+
+3. ?
+
+4. ?
+
+5. ?
+
+6. ?
+
+7. ?
+
+ How many jobs are run? How 
+
+- ?
 
 ## Setting up GitHub Actions workflows with Python
 
