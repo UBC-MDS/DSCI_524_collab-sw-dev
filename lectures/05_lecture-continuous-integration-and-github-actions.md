@@ -445,23 +445,21 @@ jobs:
 
 #### Steps in English:
 
-1. ?
+1. checking out the files of the repository to the runner (last commit)
 
-2. ?
+2. Set up and install Python on the runner
 
-3. ?
+3. Use poetry to install dependencies and the package
 
-4. ?
+4. Check for adherence to pep 8 style
 
-5. ?
+5. Run tests and check coverage, generate a coverage report
 
-6. ?
+6. Send the coverage report to codecov.io
 
-7. ?
+#### How many jobs are run? What does each do?
 
- How many jobs are run? How 
-
-- ?
+- 6
 
 ## Setting up GitHub Actions workflows with Python
 
