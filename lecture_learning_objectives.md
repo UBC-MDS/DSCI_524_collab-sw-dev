@@ -54,6 +54,11 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 6:
 By the end of this lecture, students should be able to:
+- Explain semantic versioning, and define what constitutes patch, minor, major and breaking changes
+- Use GitHub Actions to set-up automated deployment of Python packages upon push to the master branch
 - Generate well formatted function and package-level documentation for R using Roxygen and `pkgdown`
 - Generate well formatted function and package-level documentation for Python packages using Sphinx & Read the Docs
+- Publish Python packages to test PyPI or PyPI
+- Publish R packages to GitHub, document how to install them via `devtools::install_github`
+- Compare and contrast PyPI and CRAN
 <!-- #endregion -->
