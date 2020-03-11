@@ -60,7 +60,12 @@ By the end of this lecture, students should be able to:
 - Use GitHub Actions to set-up automated deployment of Python packages upon push to the master branch
 - Generate well formatted function and package-level documentation for R using Roxygen and `pkgdown`
 - Generate well formatted function and package-level documentation for Python packages using Sphinx & Read the Docs
-- Publish Python packages to test PyPI or PyPI
+- Publish Python packages to test PyPI
 - Publish R packages to GitHub, document how to install them via `devtools::install_github`
+
+
+## Lecture 7:
+By the end of this lecture, students should be able to:
 - Compare and contrast PyPI and CRAN
+- Perform peer review of Data Science software packages
 <!-- #endregion -->
