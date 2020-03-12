@@ -403,6 +403,7 @@ There are several levels of documentation possible for Python packages:
 
 - We already did this with our toy `foocat` package by:
     - adding sphinx as a dev dependency via `poetry add --dev sphinx`
+    - create the `.rst` files for your package functions by running: `poetry run sphinx-apidoc -f -o docs/source <package_name>` from the project root
     - and then ran `poetry run make html` from the docs directory
 
 ### Code & package-level documentation
