@@ -44,7 +44,7 @@ This is a project-based course where you will work collaboratively in groups to 
 | 4 | [Testing coverage & debugging](lectures/04_lecture-debugging-and-docs.md) | 50 min of video to watch: <ul><li>[Jenny Bryan's talk on troubleshooting and debugging](https://resources.rstudio.com/rstudio-conf-2020/object-of-type-closure-is-not-subsettable-jenny-bryan)</li></ul>  |  |
 | 5 | [Continous integration (CI) via GitHub Actions](lectures/05_lecture-continuous-integration-and-github-actions.md) |  | <ul><li>[GitHub Actions docs](https://help.github.com/en/actions)</li><li>[Github actions with R](https://ropenscilabs.github.io/actions_sandbox/packageci.html)</li></ul> |
 | 6 | [Continuous deployment, versioning & package documentation](lectures/06_lecture-cd-semver-and-docs.ipynb) |  | <ul><li>[Semantic versioning](https://semver.org/)</ul><li>[R: Object Documentation](https://r-pkgs.org/man.html)</li><li>[R: Vignettes](https://r-pkgs.org/vignettes.html)</li><li>[`pkgdown`](https://pkgdown.r-lib.org/)<li>[Python: Documenting with Sphinx and Read the Docs](https://www.pythonforthelab.com/blog/documenting-with-sphinx-and-readthedocs/)</li></ul> |
-| 7 | Publishing your package on the package indices (CRAN & PyPI), and peer review of data science R & Python packages |  |  |
+| 7 | [Publishing your package on the package indices (CRAN & PyPI), and peer review of data science R & Python packages](lectures/07_lecture-pypi-cran-and-pkg-review.ipynb) |  | <ul><li>[rOpenSci Packages: Development, Maintenance, and Peer Review](https://devguide.ropensci.org/)</li><li>[The pyOpenSci Developer Guide](https://www.pyopensci.org/dev_guide/intro)</li></ul> |
 | 8 | Working with other teams (specifications, opening issues, how to ask for help, etc) & Licenses |  |  |
 
 
