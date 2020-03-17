@@ -66,6 +66,9 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 7:
 By the end of this lecture, students should be able to:
-- Compare and contrast PyPI and CRAN
-- Perform peer review of Data Science software packages
+- Explain the advantage of using of packages that have undergone peer review
+- List the rOpenSci and PyOpenSci organizations aims and goals
+- Describe the peer review process used by the rOpenSci and PyOpenSci organizations
+- Describe the requirements for publishing packages on CRAN and PyPI
+- Explain the philosophical difference between how CRAN and PyPI gatekeep pacakges, and how this impacts the packages that are found on each repository/index
 <!-- #endregion -->
