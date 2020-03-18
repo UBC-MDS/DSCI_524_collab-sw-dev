@@ -71,4 +71,10 @@ By the end of this lecture, students should be able to:
 - Describe the peer review process used by the rOpenSci and PyOpenSci organizations
 - Describe the requirements for publishing packages on CRAN and PyPI
 - Explain the philosophical difference between how CRAN and PyPI gatekeep pacakges, and how this impacts the packages that are found on each repository/index
+
+## Lecture 8:
+By the end of this lecture, students should be able to:
+- Explain who owns the copyright of code they write in a give situation, and why
+- Choose an appropriate license for software (i.e., packages or analysis code)
+- Choose an appropriate license for your non-software materials
 <!-- #endregion -->
