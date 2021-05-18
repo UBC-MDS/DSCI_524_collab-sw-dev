@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milestone 2 &#8212; DSCI 524 Collaborative Software Development</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Milestone 3" href="milestone3.html" />
+    <link rel="prev" title="Milestone 1" href="milestone1.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">DSCI 524 Collaborative Software Development</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   DSCI 524: Collaborative Software Development
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/01_lecture-intro-to-r-and-python-pkgs.html">
+   Lecture 1: Introduction to R &amp; Python packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/02_lecture-intro-more-git.html">
+   Lecture 2: Introduction &amp; my goodness more git!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/03_lecture-code-review-and-testing.html">
+   Lecture 3: Code reviews, testing and advice for testing complex things
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/04_lecture-debugging-and-docs.html">
+   Lecture 4: Code coverage &amp; package dependencies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/05_lecture-continuous-integration-and-github-actions.html">
+   Lecture 5: Introductions to Continuous Integration (CI) &amp; GitHub Actions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/06_lecture-cd-semver-and-docs.html">
+   Lecture 6: Introductions to Continuous Development (CD), package documentation &amp; publishing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/07_lecture-pypi-cran-and-pkg-review.html">
+   Lecture 7: Peer review of packages, and the package repositories/indices CRAN and PyPI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/08_lecture-who-owns-the-code-and-how-can-I-use-it.html">
+   Lecture 8: Who owns the code? And how can I use it?
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="milestone1.html">
+   Milestone 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Milestone 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="milestone3.html">
+   Milestone 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="milestone4.html">
+   Milestone 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="individual_assignment1.html">
+   Individual assignment 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="individual_assignment2.html">
+   Individual assignment 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="peer_review.html">
+   Peer review: Constructively reviewing packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="team_work.html">
+   Team project reflection
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendices/appendix.html">
+   Appendix
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/materials/assignments/milestone2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.ubc.ca/MDS-2020-21/DSCI_524_collab-sw-dev_students"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.ubc.ca/MDS-2020-21/DSCI_524_collab-sw-dev_students/issues/new?title=Issue%20on%20page%20%2Fmaterials/assignments/milestone2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-package-checklist">
+   Python package checklist
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-test-cases-and-code-iteratively">
+     1. Write test cases and code iteratively
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exception-handling">
+       Exception handling
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#planning-and-organizing-your-work">
+       Planning and organizing your work
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#r-package-checklist">
+   R package checklist
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-project-structure-for-the-r-project">
+     1. Create project structure for the R project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#r-package-function-specifications">
+     2. R package function specifications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#specific-expectations-for-this-milestone-are">
+   Specific expectations for this milestone are:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submission-instructions">
+   Submission instructions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources-to-help-you-on-your-way">
+   Resources to help you on your way:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     Python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#r">
+     R
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="milestone-2">
+<h1>Milestone 2<a class="headerlink" href="#milestone-2" title="Permalink to this headline">¶</a></h1>
+<p>In this milestone, you will write the unit tests and function internals for your Python package, as well as setup the R package structure and function specifications.</p>
+<div class="section" id="python-package-checklist">
+<h2>Python package checklist<a class="headerlink" href="#python-package-checklist" title="Permalink to this headline">¶</a></h2>
+<p>In the last milestone, you created your Python package structure and empty functions with documentation. In this milestone, you will focus on two things for your Python package: writing unit tests for your function specifications and writing the internal code for your functions. <strong>Recall that each team member should write at least one function in R and one function in Python and unit tests for both functions.</strong></p>
+<p>Before starting your work we encourage you to go through the bullet points below so that you can plan the milestone and assign tasks to individual team members. Note that your GitHub issues is one of the primary sources for us to see your work devision and contribution.</p>
+<p><strong>By the end of this milestone, we should be able to install and use your Python package functions from GitHub</strong> (you do not need to publish your package on PyPI yet).</p>
+<div class="section" id="write-test-cases-and-code-iteratively">
+<h3>1. Write test cases and code iteratively<a class="headerlink" href="#write-test-cases-and-code-iteratively" title="Permalink to this headline">¶</a></h3>
+<p>rubric={accuracy:20,quality:10,mechanics:10}</p>
+<ul class="simple">
+<li><p>Before writing any code, revisit your function specifications from last week and revise them if needed. As you do this, think critically about what function inputs you expect from the user and what your function is supposed to do (<em>e.g.,</em> return).</p></li>
+<li><p>Write a unit test function for each specified function, which is named after the function being tested (e.g., if the function is named <code class="docutils literal notranslate"><span class="pre">foo</span></code> then the unit test function is named <code class="docutils literal notranslate"><span class="pre">test_foo</span></code>). The unit test function should test 3 to 5 edge cases to ensure that the function returns what is expected to the user. When writing your tests, build them around your function specifications and requirements.</p></li>
+<li><p>After writing your unit tests, write the internal code for your Python functions.</p></li>
+<li><p>Write function code and tests in close temporal proximity with each other. The process of writing function code and test cases will be iterative; there will be several rounds of writing tests <span class="math notranslate nohighlight">\(\rightarrow\)</span> function improvement <span class="math notranslate nohighlight">\(\rightarrow\)</span> writing more tests <span class="math notranslate nohighlight">\(\rightarrow\)</span> function improvement <span class="math notranslate nohighlight">\(\rightarrow\)</span> writing more tests <span class="math notranslate nohighlight">\(\rightarrow\)</span> function improvement, etc.</p></li>
+<li><p>Make sure that the tests cover all branches (e.g., if your function has an if statement, you should have tests where the if statement is true, and where the if statement is false.</p></li>
+<li><p>As you develop your code and test cases, update your code documentation so that it makes sense with any of the changes you have made. Do not forget to also document your test functions.</p></li>
+<li><p>Check whether the code passes the unit tests you have written using the <a class="reference external" href="https://docs.pytest.org/en/latest/getting-started.html"><code class="docutils literal notranslate"><span class="pre">pytest</span></code> package</a>.</p></li>
+</ul>
+<div class="section" id="exception-handling">
+<h4>Exception handling<a class="headerlink" href="#exception-handling" title="Permalink to this headline">¶</a></h4>
+<p>rubric={quality:10}</p>
+<ul class="simple">
+<li><p>The function should be written defensively. That is, it should handle incorrect input and errors detected during execution via throwing exceptions with useful error messages, and there should be tests to confirm that the exceptions result in the expected behaviour of the function.</p></li>
+</ul>
+</div>
+<div class="section" id="planning-and-organizing-your-work">
+<h4>Planning and organizing your work<a class="headerlink" href="#planning-and-organizing-your-work" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Any ideas/notes that you generate that are related to your assigned function should be recorded in the corresponding issue you created in milestone 1. The issue should be closed by the end of milestone 2.</p></li>
+<li><p>If you think of new ideas or test cases and you do not have time to implement them in this milestone, create an issue for them which you can complete during the next milestone.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="r-package-checklist">
+<h2>R package checklist<a class="headerlink" href="#r-package-checklist" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-project-structure-for-the-r-project">
+<h3>1. Create project structure for the R project<a class="headerlink" href="#create-project-structure-for-the-r-project" title="Permalink to this headline">¶</a></h3>
+<p>rubric={mechanics:20}</p>
+<ol class="simple">
+<li><p>Create <a class="reference external" href="https://r-pkgs.org/whole-game.html">project structure for the R package</a> and push it as a public repository in the <a class="reference external" href="https://github.com/UBC-MDS/">UBC-MDS organization</a> on Github.com.</p></li>
+<li><p>The name of the repository should be relevant to the package/project topics.</p></li>
+<li><p>For now choose the MIT license. You may change it later when you learn more about licenses.</p></li>
+<li><p>Use <a class="reference external" href="https://usethis.r-lib.org/reference/use_code_of_conduct.html"><code class="docutils literal notranslate"><span class="pre">usethis::use_code_of_conduct</span></code></a> to add a code of conduct. You may want to customize it further to suit your group.</p></li>
+<li><p>Add the team members as authors to the <code class="docutils literal notranslate"><span class="pre">DESCRIPTION</span></code> file.</p></li>
+<li><p>Use <a class="reference external" href="https://usethis.r-lib.org/reference/tidyverse.html"><code class="docutils literal notranslate"><span class="pre">usethis::use_tidy_contributing()</span></code></a> to add a <code class="docutils literal notranslate"><span class="pre">CONTRIBUTING.md</span></code> file to your package. This file will live in <code class="docutils literal notranslate"><span class="pre">.github</span></code> and it will create that folder if it does not already exist. Edit the boiler plate document this gives to to reflect your contribution strategy that your team has agreed upon.</p></li>
+<li><p>Outline the package you would like to build in the <code class="docutils literal notranslate"><span class="pre">README.Rmd</span></code> file. (This can be identical for both projects at this point in the project). In particular, your <code class="docutils literal notranslate"><span class="pre">README.md</span></code> should contain:</p>
+<ul class="simple">
+<li><p>a summary paragraph that describes the project at a high level</p></li>
+<li><p>a bulleted list of the functions (and datasets if applicable) that will be included in the package (this should be a 1-2 sentence description for each function/dataset)</p></li>
+<li><p>a paragraph describing where your packages fit into the R ecosystem (are there any other R packages that have the same/similar functionality? Provide links to any that do. If none exist, then clearly state this as well).</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="r-package-function-specifications">
+<h3>2. R package function specifications<a class="headerlink" href="#r-package-function-specifications" title="Permalink to this headline">¶</a></h3>
+<p>rubric={quality:10}</p>
+<p>For this milestone you will write R function documentation that will serve as specifications, but you will <strong>NOT</strong> write any code for your package functions. Specifically, set-up empty functions (with appropriate function names) containing no code in the files where you will eventually write code. Write function documentation (e.g., complete roxygen2 comments). These are the functions you wrote about in your proposal.</p>
+</div>
+</div>
+<div class="section" id="specific-expectations-for-this-milestone-are">
+<h2>Specific expectations for this milestone are:<a class="headerlink" href="#specific-expectations-for-this-milestone-are" title="Permalink to this headline">¶</a></h2>
+<p>rubric={mechanics:10}</p>
+<ol class="simple">
+<li><p>You should be committing to git every time you work on this project. The git commit messages should be meaningful. These will be marked. It is OK if one or two are less meaningful, but most should be.</p></li>
+<li><p>In this project, we ask you to follow <a class="reference external" href="https://guides.github.com/introduction/flow/">the GitHub Flow workflow</a>. In particular, once the repositories are set up, each team member will</p>
+<ul class="simple">
+<li><p>create a branch</p></li>
+<li><p>work on the function you are responsible for in this branch</p></li>
+<li><p>add commits</p></li>
+<li><p>open a pull request</p></li>
+<li><p>wait for the code review and feedback from another team member, and once you have addressed the feedback from the other team member(s), one of them will merge your pull request</p></li>
+</ul>
+</li>
+<li><p>Use GitHub for project-related communication.</p>
+<ul class="simple">
+<li><p>Use GitHub issues to communicate with team mates (as opposed to email or Slack).</p></li>
+<li><p>Create project boards using GitHub and link tasks to issues.</p></li>
+<li><p>Create GitHub milestones to group related issues.  In particular, make a milestone for this milestone called <code class="docutils literal notranslate"><span class="pre">milestone2</span></code> and put all the relevant issues linked to it.</p></li>
+</ul>
+</li>
+<li><p>Use proper grammar and full sentences throughout the project, especially in your <code class="docutils literal notranslate"><span class="pre">README</span></code>.</p></li>
+</ol>
+</div>
+<div class="section" id="submission-instructions">
+<h2>Submission instructions<a class="headerlink" href="#submission-instructions" title="Permalink to this headline">¶</a></h2>
+<p>rubric={mechanics:10}</p>
+<p>In the textbox provided on Canvas for the Milestone 2 assignment you must include:</p>
+<ol class="simple">
+<li><p>The URL for each of your your public projects’ repositories</p></li>
+<li><p>The URL to a release for each of your projects repositories</p></li>
+</ol>
+</div>
+<div class="section" id="resources-to-help-you-on-your-way">
+<h2>Resources to help you on your way:<a class="headerlink" href="#resources-to-help-you-on-your-way" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://py-pkgs.org/">Python Packages book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ttimbers/convertempPy"><code class="docutils literal notranslate"><span class="pre">convertempPy</span></code> Python package example</a></p></li>
+</ul>
+</div>
+<div class="section" id="r">
+<h3>R<a class="headerlink" href="#r" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://r-pkgs.org/">R Packages book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ttimbers/convertempr"><code class="docutils literal notranslate"><span class="pre">convertempr</span></code> R package example</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./materials/assignments"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="milestone1.html" title="previous page">Milestone 1</a>
+    <a class='right-next' id="next-link" href="milestone3.html" title="next page">Milestone 3</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tiffany Timbers<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

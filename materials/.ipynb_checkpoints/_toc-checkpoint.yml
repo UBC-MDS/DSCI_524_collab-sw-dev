@@ -1,0 +1,28 @@
+- file: README
+  numbered: false
+
+- part: Lectures
+  sections:
+  - file: materials/lectures/01_lecture-intro-to-r-and-python-pkgs
+  - file: materials/lectures/02_lecture-intro-more-git
+  - file: materials/lectures/03_lecture-code-review-and-testing
+  - file: materials/lectures/04_lecture-debugging-and-docs
+  - file: materials/lectures/05_lecture-continuous-integration-and-github-actions
+  - file: materials/lectures/06_lecture-cd-semver-and-docs
+  - file: materials/lectures/07_lecture-pypi-cran-and-pkg-review
+  - file: materials/lectures/08_lecture-who-owns-the-code-and-how-can-I-use-it
+
+- part: Assignments
+  sections:
+  - file: materials/assignments/milestone1
+  - file: materials/assignments/milestone2
+  - file: materials/assignments/milestone3
+  - file: materials/assignments/milestone4
+  - file: materials/assignments/individual_assignment1
+  - file: materials/assignments/individual_assignment2
+  - file: materials/assignments/peer_review
+  - file: materials/assignments/team_work
+
+- part: Appendices
+  sections:
+  - file: materials/appendices/appendix

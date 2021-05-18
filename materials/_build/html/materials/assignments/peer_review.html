@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peer review: Constructively reviewing packages &#8212; DSCI 524 Collaborative Software Development</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Team project reflection" href="team_work.html" />
+    <link rel="prev" title="Individual assignment 2" href="individual_assignment2.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">DSCI 524 Collaborative Software Development</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   DSCI 524: Collaborative Software Development
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/01_lecture-intro-to-r-and-python-pkgs.html">
+   Lecture 1: Introduction to R &amp; Python packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/02_lecture-intro-more-git.html">
+   Lecture 2: Introduction &amp; my goodness more git!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/03_lecture-code-review-and-testing.html">
+   Lecture 3: Code reviews, testing and advice for testing complex things
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/04_lecture-debugging-and-docs.html">
+   Lecture 4: Code coverage &amp; package dependencies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/05_lecture-continuous-integration-and-github-actions.html">
+   Lecture 5: Introductions to Continuous Integration (CI) &amp; GitHub Actions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/06_lecture-cd-semver-and-docs.html">
+   Lecture 6: Introductions to Continuous Development (CD), package documentation &amp; publishing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/07_lecture-pypi-cran-and-pkg-review.html">
+   Lecture 7: Peer review of packages, and the package repositories/indices CRAN and PyPI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/08_lecture-who-owns-the-code-and-how-can-I-use-it.html">
+   Lecture 8: Who owns the code? And how can I use it?
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="milestone1.html">
+   Milestone 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="milestone2.html">
+   Milestone 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="milestone3.html">
+   Milestone 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="milestone4.html">
+   Milestone 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="individual_assignment1.html">
+   Individual assignment 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="individual_assignment2.html">
+   Individual assignment 2
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Peer review: Constructively reviewing packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="team_work.html">
+   Team project reflection
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendices/appendix.html">
+   Appendix
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/materials/assignments/peer_review.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.ubc.ca/MDS-2020-21/DSCI_524_collab-sw-dev_students"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.ubc.ca/MDS-2020-21/DSCI_524_collab-sw-dev_students/issues/new?title=Issue%20on%20page%20%2Fmaterials/assignments/peer_review.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#peer-review">
+   Peer review
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#readings-individual">
+     Readings (individual)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reviewing-individual">
+     Reviewing (individual)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources-and-guidelines-to-help-you-on-your-way">
+   Resources and guidelines to help you on your way
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submission-guidelines">
+   Submission guidelines
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="peer-review-constructively-reviewing-packages">
+<h1>Peer review: Constructively reviewing packages<a class="headerlink" href="#peer-review-constructively-reviewing-packages" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="peer-review">
+<h2>Peer review<a class="headerlink" href="#peer-review" title="Permalink to this headline">¶</a></h2>
+<p>rubric={reasoning:60,writing:10,mechanics:10}</p>
+<p>Unlike other weekly assignments in this course, you will be mostly working individually in this assignment. Each of you will be reviewing either an R or a Python package based on <a class="reference external" href="https://github.ubc.ca/MDS-2021-21/DSCI_524_collab-sw-dev_students/issues/7">this reviewer assignment</a>. You will be writing your review in an issue in <a class="reference external" href="https://github.com/UBC-MDS/software-review-2021">this repository</a> for the package you were assigned to review.</p>
+<div class="section" id="readings-individual">
+<h3>Readings (individual)<a class="headerlink" href="#readings-individual" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Read chapters 4 and 5 of <a class="reference external" href="https://devguide.ropensci.org/softwarereviewintro.html">Software Peer Review of Packages</a>.</p></li>
+<li><p>If you are assigned to review an R package, <a class="reference external" href="https://devguide.ropensci.org/reviewerguide.html">read chapter 7 of Software Peer Review of Packages</a>.</p></li>
+<li><p>If you are assigned to review a Python package, <a class="reference external" href="https://www.pyopensci.org/contributing-guide/appendices/templates.html#review-template">read this section of the dev guide</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="reviewing-individual">
+<h3>Reviewing (individual)<a class="headerlink" href="#reviewing-individual" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Once an issue is assigned to you, you can start your review. If nothing is assigned to you by the end of the lab, please contact the team whose package you are assigned to review.</p></li>
+<li><p>Using the package-specific templates below, review the package assigned to you and write your comprehensive review.</p>
+<ul>
+<li><p><a class="reference external" href="https://devguide.ropensci.org/reviewtemplate.html">R</a></p></li>
+<li><p><a class="reference external" href="https://www.pyopensci.org/contributing-guide/appendices/templates.html#review-template">Python</a></p></li>
+</ul>
+</li>
+<li><p>Other than checking the boxes in the template, we ask you to give at least 5-point constructive feedback in the <code class="docutils literal notranslate"><span class="pre">Review</span> <span class="pre">Comments</span></code> section. It is OK to have some overlap with the other person reviewing the package, but there should be <strong>at least 3 points of constructive feedback unique to each review</strong>.</p></li>
+<li><p>We encourage discussion and conversation between the authors and reviewers in the issue.</p></li>
+<li><p>Each team will get a chance to address your comments next week!</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="resources-and-guidelines-to-help-you-on-your-way">
+<h2>Resources and guidelines to help you on your way<a class="headerlink" href="#resources-and-guidelines-to-help-you-on-your-way" title="Permalink to this headline">¶</a></h2>
+<p>Here are some example reviews for your reference. Look for <code class="docutils literal notranslate"><span class="pre">Package</span> <span class="pre">Review</span></code> in the conversation.</p>
+<ul class="simple">
+<li><p>R package reviews</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/ropensci/software-review/issues/295">opentripplanner</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ropensci/software-review/issues/330">mapscanner</a></p></li>
+</ul>
+</li>
+<li><p>Python package reviews</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/pyOpenSci/software-review/issues/18">MovingPandas</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyOpenSci/software-review/issues/1">erddapy </a></p></li>
+</ul>
+</li>
+</ul>
+<p>Some more guidance when you write your reviews.</p>
+<ul class="simple">
+<li><p>Be concrete and specific: support your claims with evidence: provide an example or point to specific things when you write comments.</p></li>
+<li><p>Be empathetic: when you write feedback, try to put yourself at the receiving end and think about what feedback would have been useful for you.</p></li>
+<li><p>Be Constructive: Do not use evaluative or judgmental language; instead be constructive and help them build on their strengths.</p></li>
+<li><p>Tone: Don’t be mean. A good test to determine whether you are being mean or not is putting yourself or a close friend at the receiving end or imagining whether you can say it to them in a face-to-face conversation.</p></li>
+</ul>
+</div>
+<div class="section" id="submission-guidelines">
+<h2>Submission guidelines<a class="headerlink" href="#submission-guidelines" title="Permalink to this headline">¶</a></h2>
+<p>rubric={mechanics:10}</p>
+<p><strong>To submit this assignment, submit the link to the issue containing your pacakge review so that the TAs can find your review easily.</strong></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./materials/assignments"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="individual_assignment2.html" title="previous page">Individual assignment 2</a>
+    <a class='right-next' id="next-link" href="team_work.html" title="next page">Team project reflection</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tiffany Timbers<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,1061 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture 5: Introductions to Continuous Integration (CI) &amp; GitHub Actions &#8212; DSCI 524 Collaborative Software Development</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lecture 6: Introductions to Continuous Development (CD), package documentation &amp; publishing" href="06_lecture-cd-semver-and-docs.html" />
+    <link rel="prev" title="Lecture 4: Code coverage &amp; package dependencies" href="04_lecture-debugging-and-docs.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">DSCI 524 Collaborative Software Development</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   DSCI 524: Collaborative Software Development
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_lecture-intro-to-r-and-python-pkgs.html">
+   Lecture 1: Introduction to R &amp; Python packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_lecture-intro-more-git.html">
+   Lecture 2: Introduction &amp; my goodness more git!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_lecture-code-review-and-testing.html">
+   Lecture 3: Code reviews, testing and advice for testing complex things
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_lecture-debugging-and-docs.html">
+   Lecture 4: Code coverage &amp; package dependencies
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lecture 5: Introductions to Continuous Integration (CI) &amp; GitHub Actions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_lecture-cd-semver-and-docs.html">
+   Lecture 6: Introductions to Continuous Development (CD), package documentation &amp; publishing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_lecture-pypi-cran-and-pkg-review.html">
+   Lecture 7: Peer review of packages, and the package repositories/indices CRAN and PyPI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_lecture-who-owns-the-code-and-how-can-I-use-it.html">
+   Lecture 8: Who owns the code? And how can I use it?
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/milestone1.html">
+   Milestone 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/milestone2.html">
+   Milestone 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/milestone3.html">
+   Milestone 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/milestone4.html">
+   Milestone 4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/individual_assignment1.html">
+   Individual assignment 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/individual_assignment2.html">
+   Individual assignment 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/peer_review.html">
+   Peer review: Constructively reviewing packages
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/team_work.html">
+   Team project reflection
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendices
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../appendices/appendix.html">
+   Appendix
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/materials/lectures/05_lecture-continuous-integration-and-github-actions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.ubc.ca/MDS-2020-21/DSCI_524_collab-sw-dev_students"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.ubc.ca/MDS-2020-21/DSCI_524_collab-sw-dev_students/issues/new?title=Issue%20on%20page%20%2Fmaterials/lectures/05_lecture-continuous-integration-and-github-actions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-objectives">
+   Learning objectives:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuous-integration-ci">
+   Continuous Integration (CI)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-use-ci-automated-testing">
+     Why use CI + automated testing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github-actions">
+   GitHub actions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#key-concepts">
+     Key concepts:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples-of-github-actions">
+     Examples of GitHub Actions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-getting-to-know-github-actions-workflows">
+     Exercise: Getting to know GitHub Actions workflows
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#steps">
+       Steps:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#github-actions-workflow-file">
+     GitHub Actions workflow file:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commands-vs-actions">
+     Commands vs actions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commands">
+     Commands
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#actions">
+     Actions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#optional">
+       Optional:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-study-a-simplified-version-of-our-python-package-build-yml-workflow">
+   Case study: a simplified version of our Python package
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     build.yml
+    </span>
+   </code>
+   workflow:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-orientating-ourselves-with-the-build-yml-workflow">
+     Exercise: Orientating ourselves with the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       build.yml
+      </span>
+     </code>
+     workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-adding-the-build-yml-workflow-to-your-pypkgs-repository">
+     Exercise: Adding the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       build.yml
+      </span>
+     </code>
+     workflow to your
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pypkgs*
+      </span>
+     </code>
+     repository
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#storing-and-use-github-actions-credentials-safely-via-github-secrets">
+   Storing and use GitHub Actions credentials safely via GitHub Secrets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-add-a-secret-to-your-pypkgs-github-repository">
+     Exercise: add a secret to your
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pypkgs
+      </span>
+     </code>
+     GitHub repository
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Steps:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authenticating-with-the-github-token">
+   Authenticating with the
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     GITHUB_TOKEN
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-and-accessing-environment-variables-in-github-actions">
+   Creating and accessing environment variables in GitHub Actions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-workflows">
+   Matrix workflows
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-in-english-what-does-our-build-yml-file-do">
+     Exercise: in English, what does our
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       build.yml
+      </span>
+     </code>
+     file do?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#steps-in-english">
+       Steps in English:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-many-jobs-are-run-what-does-each-do">
+       How many jobs are run? What does each do?
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-github-actions-workflows-with-python">
+   Setting up GitHub Actions workflows with Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Setting up GitHub Actions workflows with Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automated-style-checking-in-python-via-flake8">
+   Automated style checking in Python via
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     flake8
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-flake8-to-check-style">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       flake8
+      </span>
+     </code>
+     to check style
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-github-actions-workflows-with-r">
+   Setting up GitHub Actions workflows with R
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-s-next">
+   What’s next?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources">
+   Resources:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#curated-list-of-awesome-actions-to-use-on-github">
+     Curated list of awesome actions to use on GitHub 🎉
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#github-actions-for-the-r-community">
+     GitHub Actions for the R community
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lecture-5-introductions-to-continuous-integration-ci-github-actions">
+<h1>Lecture 5: Introductions to Continuous Integration (CI) &amp; GitHub Actions<a class="headerlink" href="#lecture-5-introductions-to-continuous-integration-ci-github-actions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="learning-objectives">
+<h2>Learning objectives:<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<p>By the end of this lecture, students should be able to:</p>
+<ul class="simple">
+<li><p>Define continuous integration testing</p></li>
+<li><p>Explain why continuous integration testing is superior to manually running tests</p></li>
+<li><p>Define the following key concepts that underlie GitHub Actions:</p>
+<ul>
+<li><p>Actions</p></li>
+<li><p>Workflow</p></li>
+<li><p>Event</p></li>
+<li><p>Runner</p></li>
+<li><p>Job</p></li>
+<li><p>Step</p></li>
+</ul>
+</li>
+<li><p>Store and use GitHub Actions credentials safely via GitHub Secrets</p></li>
+<li><p>Use matrix GitHub Actions workflows to reduce workflow redundancy</p></li>
+<li><p>Use GitHub Actions to set-up automated running of tests by <code class="docutils literal notranslate"><span class="pre">pytest</span></code> upon push to any branch</p></li>
+<li><p>Use GitHub Actions to set-up automated running of tests by <code class="docutils literal notranslate"><span class="pre">testthat</span></code> upon push to any branch</p></li>
+</ul>
+</div>
+<div class="section" id="continuous-integration-ci">
+<h2>Continuous Integration (CI)<a class="headerlink" href="#continuous-integration-ci" title="Permalink to this headline">¶</a></h2>
+<p>Defined as the practice of <strong>frequently</strong> integrating code (<em>e.g.</em>, several times a day) changes from contributors to a shared repository. Often the submission of code to the shared repository is combined with automated testing (and other things, such as style checking) to increase code dependability and quality.</p>
+<div class="section" id="why-use-ci-automated-testing">
+<h3>Why use CI + automated testing<a class="headerlink" href="#why-use-ci-automated-testing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>detects errors sooner</p></li>
+<li><p>reduces the amount of code to be examined when debugging</p></li>
+<li><p>facilitates merging</p></li>
+<li><p>ensures new code additions do not introduce errors</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="github-actions">
+<h2>GitHub actions<a class="headerlink" href="#github-actions" title="Permalink to this headline">¶</a></h2>
+<p>A tool and service for automating software development tasks, located in the same place where you already store your code.</p>
+<div class="section" id="key-concepts">
+<h3>Key concepts:<a class="headerlink" href="#key-concepts" title="Permalink to this headline">¶</a></h3>
+<p><strong>Actions:</strong> Individual tasks you want to perform.</p>
+<p><strong>Workflow:</strong> A collection of actions (specified together in one file).</p>
+<p><strong>Event:</strong> Something that triggers the running of a workflow.</p>
+<p><strong>Runner</strong>: A machine that can run the Github Action(s).</p>
+<p><strong>Job</strong>: A set of steps executed on the same runner.</p>
+<p><strong>Step</strong>: A set of commands or actions which a job executes.</p>
+</div>
+<div class="section" id="examples-of-github-actions">
+<h3>Examples of GitHub Actions<a class="headerlink" href="#examples-of-github-actions" title="Permalink to this headline">¶</a></h3>
+<p>You have already interacted with GitHub Actions in this class! We used it to:</p>
+<ol class="simple">
+<li><p>Generate the issues in the <a class="reference external" href="https://github.com/ubc-mds/mds-homework"><code class="docutils literal notranslate"><span class="pre">mds-homework</span></code> repo</a> upon push to the “create” branch: <a class="reference external" href="https://github.com/UBC-MDS/mds-homework/blob/master/.github/workflows/create_issues.yml">https://github.com/UBC-MDS/mds-homework/blob/master/.github/workflows/create_issues.yml</a></p></li>
+<li><p>Generate a pull request in the <a class="reference external" href="https://github.com/ttimbers/review-my-pull-request"><code class="docutils literal notranslate"><span class="pre">review-my-pull-request</span></code> repo</a> upon push to the “pr” branch: : <a class="reference external" href="https://github.com/ttimbers/review-my-pull-request/blob/master/.github/workflows/pr.yml">https://github.com/ttimbers/review-my-pull-request/blob/master/.github/workflows/pr.yml</a></p></li>
+</ol>
+</div>
+<div class="section" id="exercise-getting-to-know-github-actions-workflows">
+<h3>Exercise: Getting to know GitHub Actions workflows<a class="headerlink" href="#exercise-getting-to-know-github-actions-workflows" title="Permalink to this headline">¶</a></h3>
+<p>We are going to each create our own GitHub Actions workflow. This workflow is a very simple toy example where we run some <code class="docutils literal notranslate"><span class="pre">echo</span></code> shell commands to print things to the runner’s terminal.</p>
+<div class="section" id="steps">
+<h4>Steps:<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>Create a new public <strong>GitHub.com</strong> repository.</p></li>
+<li><p>Click on the “Actions” tab</p></li>
+<li><p>Click on the first “Set up this workflow” button</p>
+<div class="figure align-default" id="gh-actions-setup">
+<a class="reference internal image-reference" href="../../_images/gh-actions-setup.png"><img alt="../../_images/gh-actions-setup.png" src="../../_images/gh-actions-setup.png" style="width: 600px;" /></a>
+</div>
+</li>
+<li><p>Click on the two green commit buttons to add this workflow file</p></li>
+<li><p>Go to the “Actions” tab and look at the build logs by following these instructions:</p>
+<p>Click on the message associated with the event that created the action:</p>
+<div class="figure align-default" id="check-logs1">
+<a class="reference internal image-reference" href="../../_images/check-logs1.png"><img alt="../../_images/check-logs1.png" src="../../_images/check-logs1.png" style="width: 600px;" /></a>
+</div>
+<p>Click on the build link:</p>
+<div class="figure align-default" id="check-logs2">
+<a class="reference internal image-reference" href="../../_images/check-logs2.png"><img alt="../../_images/check-logs2.png" src="../../_images/check-logs2.png" style="width: 600px;" /></a>
+</div>
+<p>Click on the arrow inside the build logs to expand a section and see the output of the action:</p>
+<div class="figure align-default" id="check-logs3">
+<a class="reference internal image-reference" href="../../_images/check-logs3.png"><img alt="../../_images/check-logs3.png" src="../../_images/check-logs3.png" style="width: 600px;" /></a>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="github-actions-workflow-file">
+<h3>GitHub Actions workflow file:<a class="headerlink" href="#github-actions-workflow-file" title="Permalink to this headline">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">YAML</span></code> file that lives in the <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code> directory or your repository which speciies your workflow.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request 
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called &quot;build&quot;
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Runs a single command using the runners shell
+    - name: Run a one-line script
+      run: echo Hello, world!
+
+    # Runs a set of commands using the runners shell
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
+</pre></div>
+</div>
+<p>The file above has:</p>
+<ul class="simple">
+<li><p>one job</p></li>
+<li><p>3 steps</p></li>
+<li><p>the type of runner is ubuntu</p></li>
+<li><p>the first step uses an action, and the following two steps run commands</p></li>
+</ul>
+</div>
+<div class="section" id="commands-vs-actions">
+<h3>Commands vs actions<a class="headerlink" href="#commands-vs-actions" title="Permalink to this headline">¶</a></h3>
+<p>Steps can consist commands or actions. Let’s spend some time to discuss what each of these are and how they differ.</p>
+</div>
+<div class="section" id="commands">
+<h3>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h3>
+<p>Steps that use commands look like the one shown below. They consist of a <code class="docutils literal notranslate"><span class="pre">name</span></code> and a <code class="docutils literal notranslate"><span class="pre">run</span></code> parameter. The commands listed after <code class="docutils literal notranslate"><span class="pre">run</span></code> are run in the runner’s shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- name: Run a one-line script
+      run: echo Hello, world!
+</pre></div>
+</div>
+<p>As shown in the file above, we can run multiple commands in a step using the <code class="docutils literal notranslate"><span class="pre">|</span></code> character:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Run</span> <span class="n">a</span> <span class="n">multi</span><span class="o">-</span><span class="n">line</span> <span class="n">script</span>
+      <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+        <span class="n">echo</span> <span class="n">Add</span> <span class="n">other</span> <span class="n">actions</span> <span class="n">to</span> <span class="n">build</span><span class="p">,</span>
+        <span class="n">echo</span> <span class="n">test</span><span class="p">,</span> <span class="ow">and</span> <span class="n">deploy</span> <span class="n">your</span> <span class="n">project</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
+<p>Steps that use actions look like the one shown below (which builds and publishes Docker containers). They always have a <code class="docutils literal notranslate"><span class="pre">uses</span></code> parameter, and often also have <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">with</span></code> parameters. The <code class="docutils literal notranslate"><span class="pre">uses</span></code> parameter specifies which action to use, and the <code class="docutils literal notranslate"><span class="pre">with</span></code> parameters provide arguments to those actions. The <code class="docutils literal notranslate"><span class="pre">&#64;master</span></code> at the name of the <code class="docutils literal notranslate"><span class="pre">uses</span></code> line, specifies whether to use the version at the head of the actions default branch, or a specific version (<em>e.g.,</em> <code class="docutils literal notranslate"><span class="pre">&#64;v2</span></code>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: myDocker/repository
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+</pre></div>
+</div>
+<p>Actions commonly perform one task in a workflow. There are two ways to build actions, either using JavaScript or by creating a Docker container that runs a shell script. For the latter such actions are defined by:</p>
+<ul class="simple">
+<li><p>a Dockerfile</p></li>
+<li><p>a shell script to run inside the Docker container</p></li>
+</ul>
+<blockquote>
+<div><p>In this course we will use actions built by others, but not build our own. That is beyond the scope of this course. However, if you are intersted in learning more, I point you to the documentation below.</p>
+</div></blockquote>
+<div class="section" id="optional">
+<h4>Optional:<a class="headerlink" href="#optional" title="Permalink to this headline">¶</a></h4>
+<p>For example, for the action above see its:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/elgohr/Publish-Docker-Github-Action/blob/master/Dockerfile">Dockerfile</a></p></li>
+<li><p><a class="reference external" href="https://github.com/elgohr/Publish-Docker-Github-Action/blob/master/entrypoint.sh">endpoint.sh script</a></p></li>
+<li><p><a class="reference external" href="https://github.com/elgohr/Publish-Docker-Github-Action">GitHub repo</a></p></li>
+</ul>
+<p>Read the docs here to learn how to build your own Docker container GitHub action: <a class="reference external" href="https://help.github.com/en/actions/building-actions/creating-a-docker-container-action">https://help.github.com/en/actions/building-actions/creating-a-docker-container-action</a></p>
+<p>Read the docs here to learn how to build your own JavaScript GitHub action:
+<a class="reference external" href="https://help.github.com/en/actions/building-actions/creating-a-javascript-action">https://help.github.com/en/actions/building-actions/creating-a-javascript-action</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="case-study-a-simplified-version-of-our-python-package-build-yml-workflow">
+<h2>Case study: a simplified version of our Python package <code class="docutils literal notranslate"><span class="pre">build.yml</span></code> workflow:<a class="headerlink" href="#case-study-a-simplified-version-of-our-python-package-build-yml-workflow" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Let’s break down a simplified version of our <a class="reference external" href="https://github.com/UBC-MDS/cookiecutter-ubc-mds/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/.github/workflows/build.yml"><code class="docutils literal notranslate"><span class="pre">build.yml</span></code></a> workflow file to start to better understand a real use case of GitHub Actions.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">build</span>
+
+<span class="n">on</span><span class="p">:</span> <span class="p">[</span><span class="n">push</span><span class="p">,</span> <span class="n">pull_request</span><span class="p">]</span>
+
+<span class="n">jobs</span><span class="p">:</span>
+  <span class="n">build</span><span class="p">:</span>
+    <span class="n">runs</span><span class="o">-</span><span class="n">on</span><span class="p">:</span> <span class="n">ubuntu</span><span class="o">-</span><span class="n">latest</span>
+    <span class="n">steps</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">uses</span><span class="p">:</span> <span class="n">actions</span><span class="o">/</span><span class="n">checkout</span><span class="nd">@v2</span>
+    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Set</span> <span class="n">up</span> <span class="n">Python</span> <span class="mf">3.8</span>
+      <span class="n">uses</span><span class="p">:</span> <span class="n">actions</span><span class="o">/</span><span class="n">setup</span><span class="o">-</span><span class="n">python</span><span class="nd">@v1</span>
+      <span class="k">with</span><span class="p">:</span>
+        <span class="n">python</span><span class="o">-</span><span class="n">version</span><span class="p">:</span> <span class="mf">3.8</span>
+    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Install</span> <span class="n">dependencies</span>
+      <span class="n">run</span><span class="p">:</span> <span class="o">|</span>
+        <span class="n">pip</span> <span class="n">install</span> <span class="n">poetry</span>
+        <span class="n">poetry</span> <span class="n">install</span>
+    <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">Test</span> <span class="k">with</span> <span class="n">pytest</span>
+      <span class="n">run</span><span class="p">:</span> <span class="n">poetry</span> <span class="n">run</span> <span class="n">pytest</span>
+</pre></div>
+</div>
+<div class="section" id="exercise-orientating-ourselves-with-the-build-yml-workflow">
+<h3>Exercise: Orientating ourselves with the <code class="docutils literal notranslate"><span class="pre">build.yml</span></code> workflow<a class="headerlink" href="#exercise-orientating-ourselves-with-the-build-yml-workflow" title="Permalink to this headline">¶</a></h3>
+<p>Let’s answer the following questions to start better understanding the <code class="docutils literal notranslate"><span class="pre">build.yml</span></code> workflow.</p>
+<ol class="simple">
+<li><p>How many jobs are there?</p></li>
+<li><p>How many steps are there?</p></li>
+<li><p>What which steps are actions and which are commands</p></li>
+<li><p>What is the type of runner</p></li>
+<li><p>What events trigger this workflow?</p></li>
+</ol>
+</div>
+<div class="section" id="exercise-adding-the-build-yml-workflow-to-your-pypkgs-repository">
+<h3>Exercise: Adding the <code class="docutils literal notranslate"><span class="pre">build.yml</span></code> workflow to your <code class="docutils literal notranslate"><span class="pre">pypkgs*</span></code> repository<a class="headerlink" href="#exercise-adding-the-build-yml-workflow-to-your-pypkgs-repository" title="Permalink to this headline">¶</a></h3>
+<p>Let’s add the <code class="docutils literal notranslate"><span class="pre">build.yml</span></code> workflow to our <code class="docutils literal notranslate"><span class="pre">pypkgs*</span></code> repository from week 1!</p>
+<ol class="simple">
+<li><p>Go to the actions tab for your GitHub repository</p></li>
+<li><p>Click on “<em>set up a workflow yourself</em>”</p></li>
+<li><p>Delete the template action provided to you, and paste the <code class="docutils literal notranslate"><span class="pre">build.yml</span></code> file above into the text editor. Rename the file <code class="docutils literal notranslate"><span class="pre">build.yml</span></code>.</p></li>
+<li><p>Click “Start commit”, enter a commit message and then click “Commit”.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="storing-and-use-github-actions-credentials-safely-via-github-secrets">
+<h2>Storing and use GitHub Actions credentials safely via GitHub Secrets<a class="headerlink" href="#storing-and-use-github-actions-credentials-safely-via-github-secrets" title="Permalink to this headline">¶</a></h2>
+<p>Some of the tasks we want to do in our workflows require authentication. However, the whole point of this is to automate this process - so how can we do that without sharing our authentication tokens, usernames or passwords in our workflow files?</p>
+<p>GitHub Secrets is the solution to this!</p>
+<p>GitHub Secrets are encrypted environment variables that are used only with GitHub Actions, and specified on a repository-by-repository basis. They can be accessed in a workflow file via: <code class="docutils literal notranslate"><span class="pre">${{</span> <span class="pre">secrets.SECRET_NAME</span> <span class="pre">}}</span></code></p>
+<p>See GitHub’s help docs for how to do this: <a class="reference external" href="https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets">https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets</a></p>
+<div class="section" id="exercise-add-a-secret-to-your-pypkgs-github-repository">
+<h3>Exercise: add a secret to your <code class="docutils literal notranslate"><span class="pre">pypkgs</span></code> GitHub repository<a class="headerlink" href="#exercise-add-a-secret-to-your-pypkgs-github-repository" title="Permalink to this headline">¶</a></h3>
+<p>Let’s learn how to add secrets to a GitHub repository. We’ll do this by adding our <code class="docutils literal notranslate"><span class="pre">CODECOV_TOKEN</span></code> as a secret to our <code class="docutils literal notranslate"><span class="pre">pypkgs</span></code> GitHub repository so that we can report our coverage via a nice shiny button on our repo’s README.</p>
+<div class="section" id="id1">
+<h4>Steps:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Use Poetry to add two more developmental dependencies to your project: <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">--dev</span> <span class="pre">pytest-cov</span> <span class="pre">codecov</span></code> and push your updated <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> and <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code> file to GitHub.</p></li>
+<li><p>Log into <a class="reference external" href="https://codecov.io/">codecov.io</a> using GitHub to authenticate</p></li>
+<li><p>Link your packages GitHub repo to <a class="reference external" href="https://codecov.io/">codecov.io</a></p></li>
+<li><p>Copy the <a class="reference external" href="https://codecov.io/">codecov.io</a> token for that repo from <a class="reference external" href="https://codecov.io/">codecov.io</a></p></li>
+<li><p>On the “Settings” tab of GitHub, click on “Secrets”</p></li>
+<li><p>Click “Add a new secret”</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">CODECOV_TOKEN</span></code> as the secret name, and paste your token (which you copied from <a class="reference external" href="https://codecov.io/">codecov.io</a>) as the value.</p></li>
+<li><p>Change the pytest command in your workflow to be: <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">pytest</span> <span class="pre">--cov=./</span> <span class="pre">--cov-report=xml</span></code> and then add one more step to your workflow:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- name: Upload coverage to Codecov  
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: true
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="authenticating-with-the-github-token">
+<h2>Authenticating with the <code class="docutils literal notranslate"><span class="pre">GITHUB_TOKEN</span></code><a class="headerlink" href="#authenticating-with-the-github-token" title="Permalink to this headline">¶</a></h2>
+<p>What if you need to do Git/GitHub things in your workflow? Like checkout your files to run the tests? Create a release? Open an issue? To help with this GitHub automatically (i.e., you do not need to create this secret) creates a secret named <code class="docutils literal notranslate"><span class="pre">GITHUB_TOKEN</span></code> that you can access and use in your workflow. You access this token in your workflow file via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${{ secrets.GITHUB_TOKEN }}
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-and-accessing-environment-variables-in-github-actions">
+<h2>Creating and accessing environment variables in GitHub Actions<a class="headerlink" href="#creating-and-accessing-environment-variables-in-github-actions" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes our commands or actions need environment variables. In both of these scenarios, we create environment variables and access them within a step via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>steps:
+  - name: Hello env vars
+    run: echo $VARIABLE_NAME1 $VARIABLE_NAME2
+    env:
+      VARIABLE_NAME1: &lt;variable_value1&gt;
+      VARIABLE_NAME2: &lt;variable_value2&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="matrix-workflows">
+<h2>Matrix workflows<a class="headerlink" href="#matrix-workflows" title="Permalink to this headline">¶</a></h2>
+<p>We don’t want our software to just work on one operating system, or just one version of Python or R. Ideally it is compatible with the three major operating systems as well as a couple versions of the programming language it was written it.</p>
+<p>How do we ensure this? Well, we could have several GitHub Action workflows, each of which runs the job on a different version of Python, on a different operating system. However, there would be a lot of redundancy in those workflows, with the only differences between them being the operating system of the runner and the version of Python.</p>
+<p>A more efficient way to do this with GitHub Actions workflows is to use matrix workflows. In these workflows, we use a matrix variable, which we specify as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">strategy</span><span class="p">:</span>
+  <span class="n">matrix</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">variable_name</span><span class="o">&gt;</span><span class="p">:</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">value1</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">value2</span><span class="o">&gt;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>which we can refer to in the workflow steps as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>${{ matrix.&lt;variable_name&gt; }}
+</pre></div>
+</div>
+<p>When we do this, GitHub Actions runs multiple jobs, one for each of the values in the matrix variable.</p>
+<div class="section" id="exercise-in-english-what-does-our-build-yml-file-do">
+<h3>Exercise: in English, what does our <code class="docutils literal notranslate"><span class="pre">build.yml</span></code> file do?<a class="headerlink" href="#exercise-in-english-what-does-our-build-yml-file-do" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have some understanding of GitHub Actions workflows, let’s use that knowledge to write in English what each of the steps do in this more complicated version of the workflow found in  <code class="docutils literal notranslate"><span class="pre">build.yml</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>name: build
+
+on:
+  # Trigger the workflow on push or pull request to main
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: 3.8
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        pip install poetry
+        poetry install
+    - name: Check style
+      run: poetry run flake8 --exclude=docs*
+    - name: Test with pytest
+      run: |
+        poetry run pytest --cov=./ --cov-report=xml
+    - name: Upload coverage to Codecov  
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        yml: ./codecov.yml 
+        fail_ci_if_error: true
+</pre></div>
+</div>
+<div class="section" id="steps-in-english">
+<h4>Steps in English:<a class="headerlink" href="#steps-in-english" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>checking out the files of the repository to the runner (last commit)</p></li>
+<li><p>Set up and install Python on the runner</p></li>
+<li><p>Use poetry to install dependencies and the package</p></li>
+<li><p>Check for adherence to pep 8 style</p></li>
+<li><p>Run tests and check coverage, generate a coverage report</p></li>
+<li><p>Send the coverage report to codecov.io</p></li>
+</ol>
+</div>
+<div class="section" id="how-many-jobs-are-run-what-does-each-do">
+<h4>How many jobs are run? What does each do?<a class="headerlink" href="#how-many-jobs-are-run-what-does-each-do" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>6</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="setting-up-github-actions-workflows-with-python">
+<h2>Setting up GitHub Actions workflows with Python<a class="headerlink" href="#setting-up-github-actions-workflows-with-python" title="Permalink to this headline">¶</a></h2>
+<p>Your task should already be done, except for adding the GitHub Secrets and linking your GitHub reposiroty to codecov.io. How so? When you used the UBC-MDS Cookiecutter template to create your package skeleton, it wrote you two workflow files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">build.yml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">release.yml</span></code></p></li>
+</ul>
+<p>To make the <code class="docutils literal notranslate"><span class="pre">build.yml</span></code> workflow run without fail, you will need to ensure your:</p>
+<ul class="simple">
+<li><p>the following package development dependencies have been added to <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> via <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">add</span> <span class="pre">--dev</span></code>:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">pytest</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pytest-cov</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">codecov</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flake8</span></code></p></li>
+</ul>
+</li>
+<li><p>all tests pass</p></li>
+<li><p>code adhere’s to PEP 8 standards</p></li>
+<li><p>your packages GitHub repo has been linked to <a class="reference external" href="https://codecov.io/">https://codecov.io/</a> and added your <a class="reference external" href="https://codecov.io/">codecov.io</a> token for that repo as a GitHub Secret named <code class="docutils literal notranslate"><span class="pre">CODECOV_TOKEN</span></code>.</p></li>
+</ul>
+<blockquote>
+<div><p>We will talk about <code class="docutils literal notranslate"><span class="pre">release.yml</span></code> next class.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>Setting up GitHub Actions workflows with Python<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>The README of the UBC-MDS Cookiecutter template repo has a quickstart instruction that should help you get this all set-up: https://github.com/UBC-MDS/cookiecutter-ubc-mds#quickstart</p>
+</div>
+<div class="section" id="automated-style-checking-in-python-via-flake8">
+<h2>Automated style checking in Python via <code class="docutils literal notranslate"><span class="pre">flake8</span></code><a class="headerlink" href="#automated-style-checking-in-python-via-flake8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Python code style is supposed to follow <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flake8</span></code> is an automated tool that reports which lines are violating flake8 and gives hints on how to fix them.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flake8</span></code> is part of <code class="docutils literal notranslate"><span class="pre">build.yml</span></code>, amd thus if your code does not adhere to PEP 8, then your build will fail.</p></li>
+<li><p>Good practice to use an IDE that does Python linting when writing your code, and/or run <code class="docutils literal notranslate"><span class="pre">flake8</span></code> at the command line in the root of your repo to check style before pushing to your branch.</p></li>
+</ul>
+<div class="section" id="using-flake8-to-check-style">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">flake8</span></code> to check style<a class="headerlink" href="#using-flake8-to-check-style" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>add <code class="docutils literal notranslate"><span class="pre">flake8</span></code> as a dev dependency of your package via Poerty via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span> <span class="n">add</span> <span class="o">--</span><span class="n">dev</span> <span class="n">flake8</span>
+</pre></div>
+</div>
+</li>
+<li><p>to run <code class="docutils literal notranslate"><span class="pre">flake8</span></code> for your package code (but to ignore your docs), type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span> <span class="n">run</span> <span class="n">flake8</span> <span class="o">--</span><span class="n">exclude</span><span class="o">=</span><span class="n">docs</span><span class="o">*</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="setting-up-github-actions-workflows-with-r">
+<h2>Setting up GitHub Actions workflows with R<a class="headerlink" href="#setting-up-github-actions-workflows-with-r" title="Permalink to this headline">¶</a></h2>
+<p>The dev version of <code class="docutils literal notranslate"><span class="pre">usethis</span></code> has functions that will let you set-up your CI using GitHub Actions with ease! Here’s a quickstart guide below, and more details can be found in the <a class="reference external" href="https://ropenscilabs.github.io/actions_sandbox/">Github actions with R</a> book.</p>
+<ol class="simple">
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">covr</span></code> package as a suggested dependendency to your package via: <code class="docutils literal notranslate"><span class="pre">usethis::use_package(&quot;covr&quot;,</span> <span class="pre">type</span> <span class="pre">=</span> <span class="pre">&quot;Suggests&quot;)</span></code></p></li>
+<li><p>Add a GitHub Actions workflows that runs a comprehensive build check across the major operating systems and runs the test suite and calculates coverage via: <code class="docutils literal notranslate"><span class="pre">usethis::use_github_action_check_standard()</span></code> and <code class="docutils literal notranslate"><span class="pre">usethis::use_github_action(&quot;test-coverage.yaml&quot;)</span></code></p></li>
+<li><p>Link your R package GitHub repo with <a class="reference external" href="https://codecov.io/">codecov.io</a></p></li>
+<li><p>Copy the <a class="reference external" href="https://codecov.io/">codecov.io</a> token for that repo from <a class="reference external" href="https://codecov.io/">codecov.io</a> and add that as a GitHub Secret named <code class="docutils literal notranslate"><span class="pre">CODECOV_TOKEN</span></code></p></li>
+<li><p>Add the <a class="reference external" href="https://codecov.io/">codecov.io</a> badge markdown syntax to your <code class="docutils literal notranslate"><span class="pre">README.Rmd</span></code> and knit to render the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file.</p></li>
+<li><p>Push your local changes to GitHub and sit back and watch the magic happen ✨</p></li>
+</ol>
+<p><img alt="" src="https://media.giphy.com/media/3osxYyxqXmZQt7DPtm/giphy.gif" /></p>
+</div>
+<div class="section" id="what-s-next">
+<h2>What’s next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Setting up GitHub Actions workflows for CI with R</p></li>
+<li><p>Continous development with GitHub Actions workflows in Python (including version bumping &amp; semantic release)</p></li>
+<li><p>Package-level documentation</p></li>
+<li><p>Publishing your package on the package indices</p></li>
+</ul>
+</div>
+<div class="section" id="resources">
+<h2>Resources:<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="curated-list-of-awesome-actions-to-use-on-github">
+<h3>Curated list of awesome actions to use on GitHub 🎉<a class="headerlink" href="#curated-list-of-awesome-actions-to-use-on-github" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/sdras/awesome-actions">https://github.com/sdras/awesome-actions</a></p></li>
+</ul>
+</div>
+<div class="section" id="github-actions-for-the-r-community">
+<h3>GitHub Actions for the R community<a class="headerlink" href="#github-actions-for-the-r-community" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/r-lib/actions">https://github.com/r-lib/actions</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./materials/lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="04_lecture-debugging-and-docs.html" title="previous page">Lecture 4: Code coverage &amp; package dependencies</a>
+    <a class='right-next' id="next-link" href="06_lecture-cd-semver-and-docs.html" title="next page">Lecture 6: Introductions to Continuous Development (CD), package documentation &amp; publishing</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Tiffany Timbers<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
