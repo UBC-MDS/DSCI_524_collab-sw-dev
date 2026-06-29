@@ -1,0 +1,62 @@
+---
+title: "Milestone 2"
+format:
+  html:
+    toc: true
+editor_options:
+  markdown:
+    wrap: none
+---
+
+## Milestone 2 summary
+
+In this milestone, you will:
+
+1.  Write test cases and code iteratively
+
+In the last milestone, you created your package structure and empty functions with documentation. In this milestone, you will focus on two things for your package: writing unit tests for your function specifications and writing the internal code for your functions. **Recall that each team member should write at least one function and the unit tests for at least one function.** **By the end of this milestone, we should be able to install and use your package functions from GitHub** (you do not need to publish your package on PyPI yet).
+
+2.  Continue to manage issues professionally
+
+You are also expected to continue to manage issues professionally using GitHub milestones and project boards. Before starting your work we encourage you to go through the bullet points below so that you can plan the milestone and assign tasks to individual team members. Note that your GitHub issues is one of the primary sources for us to see your work division and contribution.
+
+## Resources to help you on your way:
+
+-   [Python Packages book](https://py-pkgs.org/)
+-   [Pytest docs](https://docs.pytest.org/en/stable/)
+-   [`passwordler` Python package](https://github.com/UBC-MDS/passwordler)
+
+### 1. Write test cases and code iteratively
+
+Before writing any code, revisit your function specifications from last week and revise them if needed. As you do this, think critically about what function inputs you expect from the user and what your function is supposed to do (*e.g.,* return). The function should be written defensively. That is, it should handle incorrect input and errors detected during execution via throwing exceptions with useful error messages.
+
+Write a unit tests for each specified function, which is named after the function being tested. The unit tests should test at least 3 to 5 edge of the most important cases to ensure that the function returns what is expected to the user. It should also test for expected errors. When writing your tests, build them around your function specifications and requirements.
+
+After writing your unit tests, write the internal code for your functions. Write function code and tests in close temporal proximity with each other. The process of writing function code and test cases will be iterative; there will be several rounds of writing tests $\rightarrow$ function improvement $\rightarrow$ writing more tests $\rightarrow$ function improvement $\rightarrow$ writing more tests $\rightarrow$ function improvement, etc. Make sure that the tests cover all code branches (e.g., if your function has an if statement, you should have tests where the if statement is true, and where the if statement is false.
+
+As you develop your code and test cases, update your code documentation so that it makes sense with any of the changes you have made. Do not forget to also document your test functions. Check whether the code passes the unit tests you have written using the [`pytest` package](https://docs.pytest.org/en/latest/getting-started.html).
+
+### 2. Continue to manage issues professionally
+
+Continue managing issues effectively through project boards and milestones, make it clear who is responsible for what and what project milestone each task is associated with. In particular, create an issue for each function in the package. Each of these issues must be assigned to a single person on the team. We want all of you to get coding experience in the project and **each team member should be responsible for a package function.** So if you are a team of four, you'll be writing four functions for your package and if you are a team of three, you will be writing three functions for your package.
+
+## Submission Instructions
+
+Just before you submit the milestone 2, create a release on your project repository on GitHub and name it exactly `1.0.0` ([how to create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release)). This release allows us and you to easily jump to the state of your repository at the time of submission for grading purposes, while you continue to work on your project for the next milestone.
+
+You will submit a PDF to Gradescope for milestone 2 that includes:
+
+1.  the URL of your project's GitHub.com repository
+2.  the URL of a GitHub release of your project's project's GitHub.com repository
+
+## Expectations
+
+-   **Everyone should contribute equally to all aspects of the project** **(e.g., code, writing, project management).** **This should be evidenced by a roughly equal number of commits,** **pull request reviews and participation in communication via GitHub issues.**
+-   After the repository is set-up, each group member should work in a [GitHub flow workflow](https://docs.github.com/en/get-started/quickstart/github-flow); where they create branches for each feature or fix, which are reviewed and critiqued by at least one other teammate before the the pull request is accepted. **Remember to add `main` branch protection to help insure this happens!**
+-   You should be committing to git and pushing to GitHub.com every time you work on this project.
+-   Git commit messages should be meaningful. These will be marked. It's OK if one or two are less meaningful, but most should be.
+-   Use GitHub for project-related communication.
+    -   Use GitHub issues to communicate with team mates (as opposed to email or Slack).
+    -   Create project boards using GitHub and link tasks to issues.
+    -   Create GitHub milestones to group related issues. In particular, make a milestone for this milestone called `milestone1` and put all the relevant issues linked to it.
+-   Use proper grammar and full sentences throughout the project, especially in your `README`.

@@ -1,0 +1,490 @@
+[
+  {
+    "objectID": "release/team_work/team_work.html",
+    "href": "release/team_work/team_work.html",
+    "title": "Team project reflection",
+    "section": "",
+    "text": "The purpose of this individual report is to give you an avenue to present your viewpoint as to how the project went, how the group worked together, and your role in the group. Each group member must complete this form to report on the contributions of yourself and the other group members. That information can, if needed, be used to adjust final grades of individuals. This is a private report, meaning that none of your classmates will see this report.\nEvaluate each member of your group by writing the number that best reflects the extent to which they participated, prepared, helped the group excel, and was a team player. Use the following ratings:\nPreparation. Prepared for group meetings and presentations; has spent time becoming familiar with the material relevant for the project; understands the project’s goal and expectations; does what they say they will do on time;\nattends and is on time to group meetings and presentations.\nParticipation & communication.\nArticulates ideas effectively when speaking or writing; work is without grammatical errors; listens to others; encourages others to talk.\nHelps group excel.\nExpresses great interest in group success by evaluating ideas and suggestions; initiates problem solving; influences and encourages others to set up high standards; doesn’t accept just any idea but looks for the best ideas; stays motivated from beginning to end of project.\nTeam player (cooperation). Knows when to be a leader and a follower; keeps an open mind; compromises when appropriate; can take criticism; respects others.\nBelow, briefly describe the specific contribution(s) each team member (including yourself) made to your project. Point form is fine. Specifically, comment on the following areas:",
+    "crumbs": [
+      "Assessments",
+      "Team project reflection"
+    ]
+  },
+  {
+    "objectID": "release/team_work/team_work.html#submission",
+    "href": "release/team_work/team_work.html#submission",
+    "title": "Team project reflection",
+    "section": "Submission",
+    "text": "Submission\nWhen you have filled this out, please render the document as a PDF and submit it to Gradescope.",
+    "crumbs": [
+      "Assessments",
+      "Team project reflection"
+    ]
+  },
+  {
+    "objectID": "release/milestone4/milestone4.html",
+    "href": "release/milestone4/milestone4.html",
+    "title": "Milestone 4",
+    "section": "",
+    "text": "In this milestone, you will:\n\nSetup GitHub actions workflow for continuous integration\nSetup GitHub actions workflow for continuous deployment\nChoose a suitable license to your package and justify your choice\nAddress feedback to improve the package\nContinue to manage issues professionally",
+    "crumbs": [
+      "Assessments",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "release/milestone4/milestone4.html#milestone-4-summary",
+    "href": "release/milestone4/milestone4.html#milestone-4-summary",
+    "title": "Milestone 4",
+    "section": "",
+    "text": "In this milestone, you will:\n\nSetup GitHub actions workflow for continuous integration\nSetup GitHub actions workflow for continuous deployment\nChoose a suitable license to your package and justify your choice\nAddress feedback to improve the package\nContinue to manage issues professionally",
+    "crumbs": [
+      "Assessments",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "release/milestone4/milestone4.html#resources-to-help-you-on-your-way",
+    "href": "release/milestone4/milestone4.html#resources-to-help-you-on-your-way",
+    "title": "Milestone 4",
+    "section": "Resources to help you on your way:",
+    "text": "Resources to help you on your way:\n\nPython Packages book\nPytest docs\npasswordler Python package\n\n\n1. Setup GitHub actions workflow for continuous integration\nSetup GitHub Action workflows to check your packages:\n\nbuild\ntest suite\ncode style (optional)\n\nThese workflows should run on every push to any branch. We highly recommend using the ci-cd.yml file from the py-pkgs-cookiecutter repository.\n\n\n2. Setup GitHub actions workflow for continuous deployment\nSetup GitHub Action workflows so that the package is built and published to PyPI when pull requests are accepted to the main branch. The workflow should also use semantic versioning to automatically version the published releases. For Python we recommend using the ci-cd.yml file from the py-pkgs-cookiecutter repository.\n\n\n3. Choose a suitable license to your package and justify your choice\nExamine the license for your project and consider whether this is the choice you want to make, or whether you want to change the license. Discuss and reason the license choice in an issue in your package repository. All team members should make meaningful contributions to this discussion in the GitHub issue.\n\n\n4. Address feedback to improve the project and communicate improvements to reviewers\n\nAddress feedback:\nRevise your package to address feedback received from the DSCI 524 teaching team from past milestones, as well as feedback received from the peer review. 50% of your final grade for this milestone will be assessing whether you have addressed this feedback to improve your project.\nTo help us easily, and correctly, assess this, please use create the commit messages that address the feedback something like this:\nfix: Feedback addressed by ...\nOnce your continuous development is setup, this will update the CHANGELOG.md automatically, and the TA’s will be able to easily find the changes that addressed feedback.\nIf you already made changes before you know to write commit messages this way, you can open an issue and list the changes there. If you do this, please add a link to this issue in the PDF you submit to Gradescope.\nYou will be graded on a sliding scale for this, the more improvements you make, the higher your grade for this part of the milestone will be. The improvements should be at least one per team member, and they should significantly improve the project. This minimum could earn at most 37.5/50. To earn more, you need to exceed these minimum improvements.\n\n\nCommunicate improvements to reviewers\nIn the UBC-MDS/software-review-2025 repository, thank your reviewers for their feedback and let them know how their feedback led you to improve your package. Be specific when doing this, including both narrative and links to commits where code, test or documentation changes were made.\n\n\n\n5. Continue to manage issues professionally\nContinue managing issues effectively through project boards and milestones, make it clear who is responsible for what and what project milestone each task is associated with. In particular, create an issue for each function in the package. Each of these issues must be assigned to a single person on the team. We want all of you to get coding experience in the project and each team member should be responsible for a package function. So if you are a team of four, you’ll be writing four functions for your package and if you are a team of three, you will be writing three functions for your package.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "release/milestone4/milestone4.html#submission-instructions",
+    "href": "release/milestone4/milestone4.html#submission-instructions",
+    "title": "Milestone 4",
+    "section": "Submission Instructions",
+    "text": "Submission Instructions\nJust before you submit the milestone 4, create a release on your project repository on GitHub and name it something that makes using your new knowledge from semantic versioning (how to create a release). This release allows us and you to easily jump to the state of your repository at the time of submission for grading purposes, while you continue to work on your project for the next milestone.\nYou will submit a PDF to Gradescope for milestone 4 that includes:\n\nthe URL of your project’s GitHub.com repository\nthe URL of a GitHub release of your project’s project’s GitHub.com repository\nthe URL of the GitHub issue where you discuss the license for your package",
+    "crumbs": [
+      "Assessments",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "release/milestone4/milestone4.html#expectations",
+    "href": "release/milestone4/milestone4.html#expectations",
+    "title": "Milestone 4",
+    "section": "Expectations",
+    "text": "Expectations\n\nEveryone should contribute equally to all aspects of the project (e.g., code, writing, project management). This should be evidenced by a roughly equal number of commits, pull request reviews and participation in communication via GitHub issues.\nAfter the repository is set-up, each group member should work in a GitHub flow workflow; where they create branches for each feature or fix, which are reviewed and critiqued by at least one other teammate before the the pull request is accepted.\nYou should be committing to git and pushing to GitHub.com every time you work on this project.\nGit commit messages should be meaningful. These will be marked. It’s OK if one or two are less meaningful, but most should be.\nUse GitHub for project-related communication.\n\nUse GitHub issues to communicate with team mates (as opposed to email or Slack).\nCreate project boards using GitHub and link tasks to issues.\nCreate GitHub milestones to group related issues. In particular, make a milestone for this milestone called milestone1 and put all the relevant issues linked to it.\n\nUse proper grammar and full sentences throughout the project, especially in your README.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 4"
+    ]
+  },
+  {
+    "objectID": "release/milestone2/milestone2.html",
+    "href": "release/milestone2/milestone2.html",
+    "title": "Milestone 2",
+    "section": "",
+    "text": "In this milestone, you will:\n\nWrite test cases and code iteratively\n\nIn the last milestone, you created your package structure and empty functions with documentation. In this milestone, you will focus on two things for your package: writing unit tests for your function specifications and writing the internal code for your functions. Recall that each team member should write at least one function and the unit tests for at least one function. By the end of this milestone, we should be able to install and use your package functions from GitHub (you do not need to publish your package on PyPI yet).\n\nContinue to manage issues professionally\n\nYou are also expected to continue to manage issues professionally using GitHub milestones and project boards. Before starting your work we encourage you to go through the bullet points below so that you can plan the milestone and assign tasks to individual team members. Note that your GitHub issues is one of the primary sources for us to see your work division and contribution.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "release/milestone2/milestone2.html#milestone-2-summary",
+    "href": "release/milestone2/milestone2.html#milestone-2-summary",
+    "title": "Milestone 2",
+    "section": "",
+    "text": "In this milestone, you will:\n\nWrite test cases and code iteratively\n\nIn the last milestone, you created your package structure and empty functions with documentation. In this milestone, you will focus on two things for your package: writing unit tests for your function specifications and writing the internal code for your functions. Recall that each team member should write at least one function and the unit tests for at least one function. By the end of this milestone, we should be able to install and use your package functions from GitHub (you do not need to publish your package on PyPI yet).\n\nContinue to manage issues professionally\n\nYou are also expected to continue to manage issues professionally using GitHub milestones and project boards. Before starting your work we encourage you to go through the bullet points below so that you can plan the milestone and assign tasks to individual team members. Note that your GitHub issues is one of the primary sources for us to see your work division and contribution.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "release/milestone2/milestone2.html#resources-to-help-you-on-your-way",
+    "href": "release/milestone2/milestone2.html#resources-to-help-you-on-your-way",
+    "title": "Milestone 2",
+    "section": "Resources to help you on your way:",
+    "text": "Resources to help you on your way:\n\nPython Packages book\nPytest docs\npasswordler Python package\n\n\n1. Write test cases and code iteratively\nBefore writing any code, revisit your function specifications from last week and revise them if needed. As you do this, think critically about what function inputs you expect from the user and what your function is supposed to do (e.g., return). The function should be written defensively. That is, it should handle incorrect input and errors detected during execution via throwing exceptions with useful error messages.\nWrite a unit tests for each specified function, which is named after the function being tested. The unit tests should test at least 3 to 5 edge of the most important cases to ensure that the function returns what is expected to the user. It should also test for expected errors. When writing your tests, build them around your function specifications and requirements.\nAfter writing your unit tests, write the internal code for your functions. Write function code and tests in close temporal proximity with each other. The process of writing function code and test cases will be iterative; there will be several rounds of writing tests \\(\\rightarrow\\) function improvement \\(\\rightarrow\\) writing more tests \\(\\rightarrow\\) function improvement \\(\\rightarrow\\) writing more tests \\(\\rightarrow\\) function improvement, etc. Make sure that the tests cover all code branches (e.g., if your function has an if statement, you should have tests where the if statement is true, and where the if statement is false.\nAs you develop your code and test cases, update your code documentation so that it makes sense with any of the changes you have made. Do not forget to also document your test functions. Check whether the code passes the unit tests you have written using the pytest package.\n\n\n2. Continue to manage issues professionally\nContinue managing issues effectively through project boards and milestones, make it clear who is responsible for what and what project milestone each task is associated with. In particular, create an issue for each function in the package. Each of these issues must be assigned to a single person on the team. We want all of you to get coding experience in the project and each team member should be responsible for a package function. So if you are a team of four, you’ll be writing four functions for your package and if you are a team of three, you will be writing three functions for your package.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "release/milestone2/milestone2.html#submission-instructions",
+    "href": "release/milestone2/milestone2.html#submission-instructions",
+    "title": "Milestone 2",
+    "section": "Submission Instructions",
+    "text": "Submission Instructions\nJust before you submit the milestone 2, create a release on your project repository on GitHub and name it exactly 1.0.0 (how to create a release). This release allows us and you to easily jump to the state of your repository at the time of submission for grading purposes, while you continue to work on your project for the next milestone.\nYou will submit a PDF to Gradescope for milestone 2 that includes:\n\nthe URL of your project’s GitHub.com repository\nthe URL of a GitHub release of your project’s project’s GitHub.com repository",
+    "crumbs": [
+      "Assessments",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "release/milestone2/milestone2.html#expectations",
+    "href": "release/milestone2/milestone2.html#expectations",
+    "title": "Milestone 2",
+    "section": "Expectations",
+    "text": "Expectations\n\nEveryone should contribute equally to all aspects of the project (e.g., code, writing, project management). This should be evidenced by a roughly equal number of commits, pull request reviews and participation in communication via GitHub issues.\nAfter the repository is set-up, each group member should work in a GitHub flow workflow; where they create branches for each feature or fix, which are reviewed and critiqued by at least one other teammate before the the pull request is accepted. Remember to add main branch protection to help insure this happens!\nYou should be committing to git and pushing to GitHub.com every time you work on this project.\nGit commit messages should be meaningful. These will be marked. It’s OK if one or two are less meaningful, but most should be.\nUse GitHub for project-related communication.\n\nUse GitHub issues to communicate with team mates (as opposed to email or Slack).\nCreate project boards using GitHub and link tasks to issues.\nCreate GitHub milestones to group related issues. In particular, make a milestone for this milestone called milestone1 and put all the relevant issues linked to it.\n\nUse proper grammar and full sentences throughout the project, especially in your README.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 2"
+    ]
+  },
+  {
+    "objectID": "release/individual_assignment/individual_assignment.html",
+    "href": "release/individual_assignment/individual_assignment.html",
+    "title": "Individual assignment",
+    "section": "",
+    "text": "This assignment will provide practice packing software in both the R and Python languages. Specifically you will follow two tutorials to create toy/practice packages, one in each of the software languages. This will help prepare you to work on and complete your group project for this course.\n\nRead through and follow the instructions in How to package a Python to create a toy/practice package in the Python programming language. Note - you only need to publish your package to TestPyPI, not PyPI. Push all your work to GitHub.com in a repository under your personal username.\nRead through and follow the instructions in The Whole Game to create a toy/practice package in the R programming language. Push all your work to GitHub.com in a repository under your personal username.",
+    "crumbs": [
+      "Assessments",
+      "Individual assignment"
+    ]
+  },
+  {
+    "objectID": "release/individual_assignment/individual_assignment.html#package-software-in-r-and-python",
+    "href": "release/individual_assignment/individual_assignment.html#package-software-in-r-and-python",
+    "title": "Individual assignment",
+    "section": "",
+    "text": "This assignment will provide practice packing software in both the R and Python languages. Specifically you will follow two tutorials to create toy/practice packages, one in each of the software languages. This will help prepare you to work on and complete your group project for this course.\n\nRead through and follow the instructions in How to package a Python to create a toy/practice package in the Python programming language. Note - you only need to publish your package to TestPyPI, not PyPI. Push all your work to GitHub.com in a repository under your personal username.\nRead through and follow the instructions in The Whole Game to create a toy/practice package in the R programming language. Push all your work to GitHub.com in a repository under your personal username.",
+    "crumbs": [
+      "Assessments",
+      "Individual assignment"
+    ]
+  },
+  {
+    "objectID": "release/individual_assignment/individual_assignment.html#submission-instructions",
+    "href": "release/individual_assignment/individual_assignment.html#submission-instructions",
+    "title": "Individual assignment",
+    "section": "Submission Instructions",
+    "text": "Submission Instructions\nYou will submit a PDF to Gradescope for this individual assignment that includes:\n\nthe URL of the GitHub.com repository containing your toy/practice package in the Python programming language\nthe URL of the GitHub.com repository containing your toy/practice package in the R programming language",
+    "crumbs": [
+      "Assessments",
+      "Individual assignment"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DSCI 524: Collaborative Software Development",
+    "section": "",
+    "text": "How to exploit practices from collaborative software development techniques in data scientific workflows. Appropriate use of the software life cycle, unit testing / continuous integration, and packaging for use by others.",
+    "crumbs": [
+      "Syllabus",
+      "DSCI 524: Collaborative Software Development"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
+    "title": "DSCI 524: Collaborative Software Development",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\nBy the end of the course, students are expected to be able to:\n\ncomplete a project that demonstrates appropriate use of collaborative software development processes and tools, including:\n\npackaging code for use by others, including the specification of dependencies/requirements\nusing advanced distributed version control workflows and features (e.g., GitHub flow, master branch protection, code reviews, project boards and issue tracking) to effectively manage a multi-person project\nwriting comprehensive test suites\ncarrying out continuous integration via GitHub Actions\ndeploying packaged software using semantic versioning\nwriting clear and helpful documentation\nselecting software licenses that best suit the project\ncritically evaluating work of others and providing constructive feedback\n\n\nSee here for lecture-by-lecture learning objectives",
+    "crumbs": [
+      "Syllabus",
+      "DSCI 524: Collaborative Software Development"
+    ]
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "DSCI 524: Collaborative Software Development",
+    "section": "Teaching Team",
+    "text": "Teaching Team\n\n\n\n\n\n\n\n\n\nSection\nPosition\nName\nSlack Handle\n\n\n\n\n001\nLecture & Lab Instructor\nTiffany Timbers\n@tiff\n\n\n002\nLecture & Lab Instructor\nDaniel Chen\n@Daniel (Instructor)",
+    "crumbs": [
+      "Syllabus",
+      "DSCI 524: Collaborative Software Development"
+    ]
+  },
+  {
+    "objectID": "index.html#deliverables",
+    "href": "index.html#deliverables",
+    "title": "DSCI 524: Collaborative Software Development",
+    "section": "Deliverables",
+    "text": "Deliverables\nThis is a project-based course where you will work collaboratively in groups to develop a Python software package. In lecture and lab, we’ll work on the skills and concepts that you need to learn to complete the project. You will work in randomly assigned groups of four for the project milestones. There are also some individual weekly assignments that act as stepping stones to the project milestones. Finally, because collaboration is so important in data science, we will be using a team work multiplier to adjust individual grades. A combination of peer evaluation and GitHub history will be used to evaluate this.\n\n\n\n\n\n\n\n\nAssessment\nweight\nDeadline\n\n\n\n\niClicker\n3%\nEvery lecture\n\n\nMilestone 1: Coming up with a topic, and setting up package structure & function specification and documentation\n15%\n2024-01-11 18:00 PT\n\n\nIndividual assignment - Create your own toy Python and R packages (graded for completion)\n5%\n2024-01-11 18:00 PT\n\n\nMilestone 2: writing the code and tests for your package\n30%\n2024-01-18 18:00 PT\n\n\nMilestone 3: package documentation\n15%\n2024-01-26 11:59 PT\n\n\nMilestone 4: continuous integration (and deployment in the case of Python) and improve your package after peer review\n25%\n2024-02-03 23:59 PT\n\n\nIndividual Peer review\n5%\n2024-01-30 23:59 PT\n\n\nTeam work reflection\n2%\n2024-02-04 23:59 PT\n\n\nTeam work multiplier\nfinal grade * multiplier\nNA",
+    "crumbs": [
+      "Syllabus",
+      "DSCI 524: Collaborative Software Development"
+    ]
+  },
+  {
+    "objectID": "index.html#lecture-schedule---under-construction",
+    "href": "index.html#lecture-schedule---under-construction",
+    "title": "DSCI 524: Collaborative Software Development",
+    "section": "Lecture Schedule - under construction!",
+    "text": "Lecture Schedule - under construction!\nLecture notes: https://ubc-dsci.github.io/reproducible-and-trustworthy-workflows-for-data-science/\n\n\n\nLecture\nTopic\nLecture notes\nAdditional readings and resources\n\n\n\n\n1\nIntroduction to R & Python packages\nIntroduction to R & Python packages\nPackage structure and state (Python) & Package structure and state (R)\n\n\n2\nIntroduction to collaborative software development\nProject management using GitHub\nGitHub project boards, GitHub project milestones, GitHub pull request reviews, About protected branches\n\n\n3\nPyTest\nPytest\nTesting in Python, pytest docs\n\n\n4\nTesting coverage\nCode coverage\nTBD\n\n\n5\nContinuous integration (CI) via GitHub Actions\nContinuous Integration CI+Python\nGitHub Actions docs, Github actions with R, Continuous integration (Python)\n\n\n6\nContinuous deployment, versioning & package documentation\nCD: Python Documentation\nSemantic versioning, R: Object Documentation, R: Vignettes, pkgdown, Documentation (Python)\n\n\n7\nPublishing your package on the package indices (CRAN & PyPI), and peer review of data science R & Python packages\nPackage Publishing: Python\nrOpenSci Packages: Development, Maintenance, and Peer Review, The pyOpenSci Developer Guide\n\n\n8\nCopyright & Licenses\nCopyright and Licenses\nWho owns the code?",
+    "crumbs": [
+      "Syllabus",
+      "DSCI 524: Collaborative Software Development"
+    ]
+  },
+  {
+    "objectID": "index.html#textbooks",
+    "href": "index.html#textbooks",
+    "title": "DSCI 524: Collaborative Software Development",
+    "section": "Textbooks:",
+    "text": "Textbooks:\n\nPython packages by Tomas Beuzen and Tiffany Timbers\nR packages by Hadley Wickham and Jenny Bryan",
+    "crumbs": [
+      "Syllabus",
+      "DSCI 524: Collaborative Software Development"
+    ]
+  },
+  {
+    "objectID": "index.html#class-schedule-office-hours",
+    "href": "index.html#class-schedule-office-hours",
+    "title": "DSCI 524: Collaborative Software Development",
+    "section": "Class Schedule & office hours",
+    "text": "Class Schedule & office hours\nSee calendar.",
+    "crumbs": [
+      "Syllabus",
+      "DSCI 524: Collaborative Software Development"
+    ]
+  },
+  {
+    "objectID": "index.html#policies",
+    "href": "index.html#policies",
+    "title": "DSCI 524: Collaborative Software Development",
+    "section": "Policies",
+    "text": "Policies\nStudents are expected to attend 100% of their scheduled lab hours and attendance will be taken at the beginning of each lab session. Students must make formal requests for academic concession in the event that they cannot attend a lab session by filling out this academic concession form and sending it to the course instructor. Applying for academic concession does not promise the granting of academic concession. Each application will be evaluated in the context of UBC’s Academic concession policy. Students missing more than 25% of the total scheduled lab hours for a course without having received an academic concession will receive a possible maximum course grade of 50% and an “F” standing for the course on the transcript.\nFor all other policies, please see the general MDS policies.\n\nAuthors: Tiffany A. Timbers, Varada Koltahar, Florencia D’Andrea, Daniel Chen",
+    "crumbs": [
+      "Syllabus",
+      "DSCI 524: Collaborative Software Development"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "DSCI 524: Collaborative Software Development",
+    "section": "License:",
+    "text": "License:\nSoftware licensed under the MIT License, non-software content licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License. See the license file for more information.",
+    "crumbs": [
+      "Syllabus",
+      "DSCI 524: Collaborative Software Development"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "Instructional Material",
+    "section": "",
+    "text": "Instructional Material\nCopyright (c) 2022 Tiffany A. Timbers, Varada Koltahar, Florencia D’Andrea\nAll instructional material in the DSCI_524_collab-sw-dev_students repository is made available under the Attribution 4.0 International (CC BY 4.0).\nThis is a human-readable summary of (and not a substitute for) the license.\nYou are free:\n\nto Share—copy and redistribute the material in any medium or format\nto Adapt—remix, transform, and build upon the material\n\nfor any purpose, even commercially.\nThe licensor cannot revoke these freedoms as long as you follow the license terms.\nUnder the following terms:\n\nAttribution—You must give appropriate credit (mentioning that your work is derived from work that is Copyright © Software Carpentry and, where practical, linking to http://software-carpentry.org/), provide a [link to the license][cc-by-human], and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\n\nNo additional restrictions—You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits. With the understanding that:\nNotices:\n\nYou do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.\nNo warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.\n\n\n\nSoftware\nExcept where otherwise noted, the example programs and other software provided in the DSCI_524_collab-sw-dev_students repository are made available under the MIT license.\nMIT License\nCopyright (c) 2022 Tiffany A. Timbers, Varada Koltahar, Florencia D’Andrea\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  {
+    "objectID": "lecture_learning_objectives.html",
+    "href": "lecture_learning_objectives.html",
+    "title": "",
+    "section": "",
+    "text": "By the end of this lecture, students should be able to: - Create project boards using GitHub and link tasks to issues - Create GitHub milestones to group related issues - Set-up master branch protection on a GitHub repository - Use branching and pull requests to propose changes to the master branch - Compare and contrast the Git and GitHub flow development workflows"
+  },
+  {
+    "objectID": "lecture_learning_objectives.html#lecture-1",
+    "href": "lecture_learning_objectives.html#lecture-1",
+    "title": "",
+    "section": "",
+    "text": "By the end of this lecture, students should be able to: - Create project boards using GitHub and link tasks to issues - Create GitHub milestones to group related issues - Set-up master branch protection on a GitHub repository - Use branching and pull requests to propose changes to the master branch - Compare and contrast the Git and GitHub flow development workflows"
+  },
+  {
+    "objectID": "lecture_learning_objectives.html#lecture-2",
+    "href": "lecture_learning_objectives.html#lecture-2",
+    "title": "",
+    "section": "Lecture 2:",
+    "text": "Lecture 2:\nBy the end of this lecture, students should be able to: - Explain the circumstances in which one should consider creating a package for their code - Name the key files and directories in both R & Python pacakges and describe the function of each - Given a function and a unit test written in R, use devtools and usethis to create a small and simple R package - Given a function and a unit test written in Python, use a Cookiecutter template and poetry to create a small and simple Python package"
+  },
+  {
+    "objectID": "lecture_learning_objectives.html#lecture-3",
+    "href": "lecture_learning_objectives.html#lecture-3",
+    "title": "",
+    "section": "Lecture 3:",
+    "text": "Lecture 3:\nBy the end of this lecture, students should be able to: - Perform a code review that uses inline comments and suggested code fixes - Define the following 3 types of testing: - unit testing - integration testing - regression testing - Employ a workflow that optimizes accurate code. - Write unit tests for complex objects (e.g., data frames, models, plots) - Use pytest and testhat to run a project’s entire test suite - Explain how pytest and testthat find the test functions when they are asked to run a project’s entire test suite"
+  },
+  {
+    "objectID": "lecture_learning_objectives.html#lecture-4",
+    "href": "lecture_learning_objectives.html#lecture-4",
+    "title": "",
+    "section": "Lecture 4:",
+    "text": "Lecture 4:\nBy the end of this lecture, students should be able to: - Define code, test and branch coverage. Explain why high coverage in each of these metrics is desired - Calculate code coverage in R and Python - Manage package dependencies in R and Python packages - Create a reprex to get help - Use traceback, options(error = recover), and browser to debug R code - Use traceback.print_last, pdb.postmortem and breakpoint to debug Python code"
+  },
+  {
+    "objectID": "lecture_learning_objectives.html#lecture-5",
+    "href": "lecture_learning_objectives.html#lecture-5",
+    "title": "",
+    "section": "Lecture 5:",
+    "text": "Lecture 5:\nBy the end of this lecture, students should be able to: - Define continuous integration testing - Explain why continuous integration testing is superior to manually running tests - Define the following key concepts that underlie GitHub Actions: - Actions - Workflow - Event - Runner - Job - Step - Store and use GitHub Actions credentials safely via GitHub Secrets - Use matrix GitHub Actions workflows to reduce workflow redundancy - Use GitHub Actions to set-up automated running of tests by pytest upon push to the master branch - Use GitHub Actions to set-up automated running of tests by testthat upon push to the master branch"
+  },
+  {
+    "objectID": "lecture_learning_objectives.html#lecture-6",
+    "href": "lecture_learning_objectives.html#lecture-6",
+    "title": "",
+    "section": "Lecture 6:",
+    "text": "Lecture 6:\nBy the end of this lecture, students should be able to: - Define continuous deployment - Explain why continuous deployment is superior to manually deploying software - Explain semantic versioning, and define what constitutes patch, minor, major and breaking changes - Use GitHub Actions to set-up automated deployment of Python packages upon push to the master branch - Generate well formatted function and package-level documentation for R using Roxygen and pkgdown - Generate well formatted function and package-level documentation for Python packages using Sphinx & Read the Docs - Publish Python packages to test PyPI - Publish R packages to GitHub, document how to install them via devtools::install_github"
+  },
+  {
+    "objectID": "lecture_learning_objectives.html#lecture-7",
+    "href": "lecture_learning_objectives.html#lecture-7",
+    "title": "",
+    "section": "Lecture 7:",
+    "text": "Lecture 7:\nBy the end of this lecture, students should be able to: - Explain the advantage of using of packages that have undergone peer review - List the rOpenSci and PyOpenSci organizations aims and goals - Describe the peer review process used by the rOpenSci and PyOpenSci organizations - Describe the requirements for publishing packages on CRAN and PyPI - Explain the philosophical difference between how CRAN and PyPI gatekeep pacakges, and how this impacts the packages that are found on each repository/index"
+  },
+  {
+    "objectID": "lecture_learning_objectives.html#lecture-8",
+    "href": "lecture_learning_objectives.html#lecture-8",
+    "title": "",
+    "section": "Lecture 8:",
+    "text": "Lecture 8:\nBy the end of this lecture, students should be able to: - Explain who owns the copyright of code they write in a give situation, and why - Choose an appropriate license for software (i.e., packages or analysis code) - Choose an appropriate license for your non-software materials"
+  },
+  {
+    "objectID": "release/milestone1/milestone1.html",
+    "href": "release/milestone1/milestone1.html",
+    "title": "Milestone 1",
+    "section": "",
+    "text": "During this course you will work collaboratively in assigned teams of four to develop a Python software package. Your package could contain functions that: - are entirely new to the R or Python ecosystem or - improve upon pre-existing functions in either language or - re-implement existing code/functions that you wish to deepen your understanding of (e.g., in a past year one student decided to write a linear regression package from scratch).\nAt the end of this project, these packages should: - contain at least 4 useful functions (depending upon your team size, there should be at minimum one function per team member) that handle errors gracefully - be well documented - have unit and integration tests - use GitHub actions for continuous integration (with a passing build stamp in the README) - have a Software Licence that describes how you will permit others to use your work - have a code of conduct document that describes behavioural expectations of team interactions - have a contributions document that outlines how the team will work together (expected workflow practices) - have a Git history that demonstrates the proposed workflow in the CONTRIBUTING.md file was followed and that all group members contributed equally - demonstrate the GitHub issues were used effectively for project communication, organization and management (e.g., GitHub milestones and project boards should be used)",
+    "crumbs": [
+      "Assessments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "release/milestone1/milestone1.html#overall-project-summary",
+    "href": "release/milestone1/milestone1.html#overall-project-summary",
+    "title": "Milestone 1",
+    "section": "",
+    "text": "During this course you will work collaboratively in assigned teams of four to develop a Python software package. Your package could contain functions that: - are entirely new to the R or Python ecosystem or - improve upon pre-existing functions in either language or - re-implement existing code/functions that you wish to deepen your understanding of (e.g., in a past year one student decided to write a linear regression package from scratch).\nAt the end of this project, these packages should: - contain at least 4 useful functions (depending upon your team size, there should be at minimum one function per team member) that handle errors gracefully - be well documented - have unit and integration tests - use GitHub actions for continuous integration (with a passing build stamp in the README) - have a Software Licence that describes how you will permit others to use your work - have a code of conduct document that describes behavioural expectations of team interactions - have a contributions document that outlines how the team will work together (expected workflow practices) - have a Git history that demonstrates the proposed workflow in the CONTRIBUTING.md file was followed and that all group members contributed equally - demonstrate the GitHub issues were used effectively for project communication, organization and management (e.g., GitHub milestones and project boards should be used)",
+    "crumbs": [
+      "Assessments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "release/milestone1/milestone1.html#milestone-1-summary",
+    "href": "release/milestone1/milestone1.html#milestone-1-summary",
+    "title": "Milestone 1",
+    "section": "Milestone 1 summary",
+    "text": "Milestone 1 summary\nIn this milestone, you will:\n\nDraft a team work contract\nChoose a topic for your software package\nCreate project structure for the software package\nWrite function specifications and documentation\nManage issues professionally",
+    "crumbs": [
+      "Assessments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "release/milestone1/milestone1.html#resources-to-help-you-on-your-way",
+    "href": "release/milestone1/milestone1.html#resources-to-help-you-on-your-way",
+    "title": "Milestone 1",
+    "section": "Resources to help you on your way:",
+    "text": "Resources to help you on your way:\n\nPython Packages book\nPytest docs\npasswordler Python package\n\n\n1. Draft a team work contract\nSimilar to what you did in DSCI 522, create a team-work contract. The contract should outline how you are committed to work together so that you are accountable to one another. Again, you may start with your team contract document from 522 and adapt it for your new team. It is a fairly personal document and please do not push it into your public repositories.\n\nIn writing this, we recommend reflecting on what went well and what didn’t go well in your last group project, and incorporating new ways of working in this team work contract to improve your group project experience this block.\n\n\n\n2. Choose a topic for your software package\nAs a team, collaboratively come up with a topic for your software package.\n\n\n3. Create project structure for the software package\n\nCreate the project structure for your software package, and push it as a public repository in the UBC-MDS organization on Github.com. There is a quickstart guide for setting up the structure for Python project, you can find it here. This time when you are prompted as whether to include GitHub Actions, say yes! In particular, choose option 3 (build + deploy).\nThe name of the repository should be relevant to the package/project topics.\nDuring project creation, you will be prompted to pick a license and for now choose the MIT license. You may change it later when you learn more about licenses.\nOnce the projects have been created, add a section to the README.md file called ## Contributors and listing the contributors’ names there (i.e., the names of the members of your student team).\nEdit CONDUCT.md to include the code of conduct for contributing to your project. The intention behind creating this file is fostering a healthy and positive work dynamic. Recall that you already have done something similar in DSCI 522, and you can start with that document and adapt it for your new team. Note that when you create the project structure with the methods above, a default version of this file will be created. You may choose to use it or adapt it with appropriate attributions.\nAgree upon a collaboration strategy that describes how you will work together on this project (e.g., GitHub flow and edit CONTRIBUTING.md to reflect your strategy. Again, there will be a default version of this file. You can use it as is or adapt it with appropriate attribution. Here are some example CONTRIBUTING.md files for your reference.\n\nSoftware Carpentry CONTRIBUTING.md\nfactory_bot_rails CONTRIBUTING.md\nmoby CONTRIBUTING.md\n\nOutline the package you would like to build in the README.md file. In particular, your README.md should contain:\n\na summary paragraph that describes the project at a high level\na bulleted list of the functions (and datasets if applicable) that will be included in the package (this should be a 1-2 sentence description for each function/dataset)\na paragraph describing where your packages fit into the Python ecosystem (are there any other Python packages that have the same/similar functionality? Provide links to any that do. If none exist, then clearly state this as well).\n\n\n\n\n4. Write function specifications and documentation\nFor this milestone you will write function documentation that will serve as specifications (e.g., a function definition with function and argument names), but you will NOT write any code for your package functions. Specifically, set-up empty functions (with appropriate function names) containing no code in the files where you will eventually write code. Write function documentation (e.g., complete docstrings). These are the functions you wrote about in your README.md file.\n\nNote: for your Python packages, because you have not written code or tests yet there will be many checks from the .github/workflows/*.yml file(s) that do not pass at this stage. This is fine and you can ignore them for now. We will work to have these checks pass in later milestones.\n\n\n\n5. Manage issues professionally\nManage issues effectively through project boards and milestones, make it clear who is responsible for what and what project milestone each task is associated with. In particular, create an issue for each function in the package. Each of these issues must be assigned to a single person on the team. We want all of you to get coding experience in the project and each team member should be responsible for a package function. So if you are a team of four, you’ll be writing four functions for your package and if you are a team of three, you will be writing three functions for your package.\nTo ensure the TA’s can grade your project board, change the visibility from the default private setting to the public setting. To change the visibility of the project board do the following:\n\nGo to the project board and click on the three vertical dots on the right-hand side of the board and select settings\nScroll to the bottom of the Settings page to the “Danger zone” and under visibility select “Public”.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "release/milestone1/milestone1.html#submission-instructions",
+    "href": "release/milestone1/milestone1.html#submission-instructions",
+    "title": "Milestone 1",
+    "section": "Submission Instructions",
+    "text": "Submission Instructions\nYou will submit a PDF to Gradescope for milestone 1 that includes:\n\nthe URL of your software package’s GitHub.com repository\nthe URL of a GitHub release of your software package’s GitHub.com repository\na copy of your teamwork contract\n\n\nCreating a release on GitHub.com\nJust before you submit the milestone 1, create a release on your project repository on GitHub and name it exactly 0.0.1 (how to create a release). This release allows us and you to easily jump to the state of your repository at the time of submission for grading puroposes, while you continue to work on your project for the next milestone.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "release/milestone1/milestone1.html#expectations",
+    "href": "release/milestone1/milestone1.html#expectations",
+    "title": "Milestone 1",
+    "section": "Expectations",
+    "text": "Expectations\n\nEveryone should contribute equally to all aspects of the project (e.g., code, writing, project management). This should be evidenced by a roughly equal number of commits, pull request reviews and participation in communication via GitHub issues.\nAfter the repository is set-up, each group member should work in a GitHub flow workflow; where they create branches for each feature or fix, which are reviewed and critiqued by at least one other teammate before the the pull request is accepted.\nYou should be committing to git and pushing to GitHub.com every time you work on this project.\nGit commit messages should be meaningful. These will be marked. It’s OK if one or two are less meaningful, but most should be.\nUse GitHub for project-related communication.\n\nUse GitHub issues to communicate with team mates (as opposed to email or Slack).\nCreate project boards using GitHub and link tasks to issues.\nCreate GitHub milestones to group related issues. In particular, make a milestone for this milestone called milestone1 and put all the relevant issues linked to it.\n\nUse proper grammar and full sentences throughout the project, especially in your README.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "release/milestone3/milestone3.html",
+    "href": "release/milestone3/milestone3.html",
+    "title": "Milestone 3",
+    "section": "",
+    "text": "In this milestone, you will:\n\nWrite and publish the package-level documentation\nContinue to manage issues professionally",
+    "crumbs": [
+      "Assessments",
+      "Milestone 3"
+    ]
+  },
+  {
+    "objectID": "release/milestone3/milestone3.html#milestone-3-summary",
+    "href": "release/milestone3/milestone3.html#milestone-3-summary",
+    "title": "Milestone 3",
+    "section": "",
+    "text": "In this milestone, you will:\n\nWrite and publish the package-level documentation\nContinue to manage issues professionally",
+    "crumbs": [
+      "Assessments",
+      "Milestone 3"
+    ]
+  },
+  {
+    "objectID": "release/milestone3/milestone3.html#resources-to-help-you-on-your-way",
+    "href": "release/milestone3/milestone3.html#resources-to-help-you-on-your-way",
+    "title": "Milestone 3",
+    "section": "Resources to help you on your way:",
+    "text": "Resources to help you on your way:\n\nPython Packages book\nPytest docs\npasswordler Python package\n\n\n1. Write and publish the package-level documentation\nYour package-level documentation should be very clear and polished by the end of this milestone. It should include a vignette (i.e., an article/tutorial) demonstrating how to use all your package functions on a more real-life example than the examples in the function documentation. There should be clear and well written narrative to go along with the code examples in the vignette. Essentially, this documentations should enable any user with minimal expertise to be able to run your package functions and play around with them.\nThis documentation should be published to a website, using the tools most appropriate for the programming language you wrote your code in. For Python, all function documentation should be rendered using the napolean Sphinx extension and readable on ReadTheDocs. Your vignette should be a Jupyter notebook in the docs folder.\nHere are some examples of good vignettes/tutorials:\n\nhttps://altair-viz.github.io/case_studies/exploring-weather.html\nhttps://matplotlib.org/stable/tutorials/images.html\nhttps://pandas.pydata.org/docs/user_guide/groupby.html\n\nMake sure you tell your users about the status of your docs and where they can view a rendered version! The easiest way to do this is to add the ReadtheDocs status button to your packages README.md file. You can find this under your project on ReadtheDocs by clicking the “i” icon beside the badge (see image below):\n\n\n\n\n\n\n\n\n\n\nQuality expectations\nGiven this is the main focus of your package this week, we want to make it clear that we have very high expectations for the quality of your package documentation.\nThis means that we expect:\n\nAn extremely clear narrative demonstrating the use of all your package functions.\nThe demonstration should be on a rich/real-life example that is motivating yet understandable.\nThe grammar and spelling should be flawless.\n\n\n\n\n2. Continue to manage issues professionally\nContinue managing issues effectively through project boards and milestones, make it clear who is responsible for what and what project milestone each task is associated with. In particular, create an issue for each function in the package. Each of these issues must be assigned to a single person on the team. We want all of you to get coding experience in the project and each team member should be responsible for a package function. So if you are a team of four, you’ll be writing four functions for your package and if you are a team of three, you will be writing three functions for your package.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 3"
+    ]
+  },
+  {
+    "objectID": "release/milestone3/milestone3.html#submission-instructions",
+    "href": "release/milestone3/milestone3.html#submission-instructions",
+    "title": "Milestone 3",
+    "section": "Submission Instructions",
+    "text": "Submission Instructions\nJust before you submit the milestone 3, create a release on your project repository on GitHub and name it exactly 1.1.0 (how to create a release). This release allows us and you to easily jump to the state of your repository at the time of submission for grading purposes, while you continue to work on your project for the next milestone.\nYou will submit a PDF to Gradescope for milestone 3 that includes:\n\nthe URL of your project’s GitHub.com repository\nthe URL of a GitHub release of your project’s project’s GitHub.com repository",
+    "crumbs": [
+      "Assessments",
+      "Milestone 3"
+    ]
+  },
+  {
+    "objectID": "release/milestone3/milestone3.html#expectations",
+    "href": "release/milestone3/milestone3.html#expectations",
+    "title": "Milestone 3",
+    "section": "Expectations",
+    "text": "Expectations\n\nEveryone should contribute equally to all aspects of the project (e.g., code, writing, project management). This should be evidenced by a roughly equal number of commits, pull request reviews and participation in communication via GitHub issues.\nAfter the repository is set-up, each group member should work in a GitHub flow workflow; where they create branches for each feature or fix, which are reviewed and critiqued by at least one other teammate before the the pull request is accepted.\nYou should be committing to git and pushing to GitHub.com every time you work on this project.\nGit commit messages should be meaningful. These will be marked. It’s OK if one or two are less meaningful, but most should be.\nUse GitHub for project-related communication.\n\nUse GitHub issues to communicate with team mates (as opposed to email or Slack).\nCreate project boards using GitHub and link tasks to issues.\nCreate GitHub milestones to group related issues. In particular, make a milestone for this milestone called milestone1 and put all the relevant issues linked to it.\n\nUse proper grammar and full sentences throughout the project, especially in your README.",
+    "crumbs": [
+      "Assessments",
+      "Milestone 3"
+    ]
+  },
+  {
+    "objectID": "release/peer_review/peer_review.html",
+    "href": "release/peer_review/peer_review.html",
+    "title": "Peer review: Constructively reviewing packages",
+    "section": "",
+    "text": "In this assignment, you will get to practice peer review of a software package by reviewing a software package created by your classmates. You will be writing your review in an issue in this repository for the package you were assigned to review. You will be evaluated on the thoughtfullness and usefullness of your feedback in the review.\n\n\n\nAt the beginning of the week, each team must initiate a review request by opening an issue per software package in the UBC-MDS/software-review-2025 repository.\nWhen opening the issue, fill in the issue template with the required information.\nYou can find the names of who was assigned to review your project here.\n\n\n\n\n\nRead the Intro, Our Goals, Benefits for Package Authors, Package Scope (What we review) and Why Open Review Matters sections of the About the pyOpenSci software peer review process chapter.\nRead the PyOpenSci Guide for Reviewers.\n\n\n\n\n\nOnce an issue is assigned to you, you can start your review. If nothing is assigned to you by the end of the lab, please contact the team whose package you are assigned to review.\nUsing the package-specific template below, review the package assigned to you and write your comprehensive review.\n\nPython\n\n\nOther than checking the boxes in the template, we ask you to give at least 5-point constructive feedback in the Review Comments section. It is OK to have some overlap with the other person reviewing the package, but there should be at least 2 points of constructive feedback unique to each review.\nWe encourage discussion and conversation between the authors and reviewers in the issue.\nEach team will get a chance to address your comments in milestone 4!\n\n\n\n\nHere are some example reviews for your reference. Look for Package Review in the conversation.\n\nR package reviews\n\nopentripplanner\nmapscanner\n\nPython package reviews\n\nMovingPandas\nerddapy\n\n\nSome more guidance when you write your reviews.\n\nBe concrete and specific: support your claims with evidence: provide an example or point to specific things when you write comments.\nBe empathetic: when you write feedback, try to put yourself at the receiving end and think about what feedback would have been useful for you.\nBe Constructive: Do not use evaluative or judgmental language; instead be constructive and help them build on their strengths.\nTone: Don’t be mean. A good test to determine whether you are being mean or not is putting yourself or a close friend at the receiving end or imagining whether you can say it to them in a face-to-face conversation.\n\n\n\n\nYou will submit a PDF to Gradescope for this peer review that includes:\n\nyour GitHub.com username\nthe URL of to the issue containing your peer review (ideally linked to your post)",
+    "crumbs": [
+      "Assessments",
+      "Peer review: Constructively reviewing packages"
+    ]
+  },
+  {
+    "objectID": "release/peer_review/peer_review.html#resources-and-guidelines-to-help-you-on-your-way",
+    "href": "release/peer_review/peer_review.html#resources-and-guidelines-to-help-you-on-your-way",
+    "title": "Peer review: Constructively reviewing packages",
+    "section": "",
+    "text": "Here are some example reviews for your reference. Look for Package Review in the conversation.\n\nR package reviews\n\nopentripplanner\nmapscanner\n\nPython package reviews\n\nMovingPandas\nerddapy\n\n\nSome more guidance when you write your reviews.\n\nBe concrete and specific: support your claims with evidence: provide an example or point to specific things when you write comments.\nBe empathetic: when you write feedback, try to put yourself at the receiving end and think about what feedback would have been useful for you.\nBe Constructive: Do not use evaluative or judgmental language; instead be constructive and help them build on their strengths.\nTone: Don’t be mean. A good test to determine whether you are being mean or not is putting yourself or a close friend at the receiving end or imagining whether you can say it to them in a face-to-face conversation.",
+    "crumbs": [
+      "Assessments",
+      "Peer review: Constructively reviewing packages"
+    ]
+  },
+  {
+    "objectID": "release/peer_review/peer_review.html#submission-instructions",
+    "href": "release/peer_review/peer_review.html#submission-instructions",
+    "title": "Peer review: Constructively reviewing packages",
+    "section": "",
+    "text": "You will submit a PDF to Gradescope for this peer review that includes:\n\nyour GitHub.com username\nthe URL of to the issue containing your peer review (ideally linked to your post)",
+    "crumbs": [
+      "Assessments",
+      "Peer review: Constructively reviewing packages"
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+---
+title: "Peer review: Constructively reviewing packages"
+---
+
+# Peer review: Constructively reviewing data analysis projects
+
+In this assignment, you will get to practice peer review of a software package by reviewing a software package created by your classmates. You will be writing your review in an issue in [this repository](https://github.com/UBC-MDS/software-review-2025) for the package you were assigned to review. You will be evaluated on the thoughtfullness and usefullness of your feedback in the review.
+
+### Initiate a review request (as a team)
+
+-   At the beginning of the week, each team must initiate a review request by opening an issue per software package in the [UBC-MDS/software-review-2025](https://github.com/UBC-MDS/software-review-2025) repository.
+-   When opening the issue, fill in the issue template with the required information.
+-   You can find the names of who was assigned to review your project [here](https://github.ubc.ca/mds-2024-25/lab-sections/blob/main/peer_review_block4_2024-25.csv).
+
+### Readings (individual)
+
+-   Read the Intro, Our Goals, Benefits for Package Authors, Package Scope (What we review)
+and Why Open Review Matters sections of the [About the pyOpenSci software peer review process chapter](https://www.pyopensci.org/software-peer-review/about/intro.html).
+-   Read the PyOpenSci [Guide for Reviewers](https://www.pyopensci.org/software-peer-review/how-to/reviewer-guide.html).
+
+### Reviewing (individual)
+
+-   Once an issue is assigned to you, you can start your review. If nothing is assigned to you by the end of the lab, please contact the team whose package you are assigned to review.
+-   Using the package-specific template below, review the package assigned to you and write your comprehensive review.
+    -   [Python](https://www.pyopensci.org/software-peer-review/how-to/reviewer-guide.html#peer-review-template)\
+-   Other than checking the boxes in the template, we ask you to give at least 5-point constructive feedback in the `Review Comments` section. It is OK to have some overlap with the other person reviewing the package, but there should be **at least 2 points of constructive feedback unique to each review**.
+-   We encourage discussion and conversation between the authors and reviewers in the issue.
+-   Each team will get a chance to address your comments in milestone 4!
+
+## Resources and guidelines to help you on your way
+
+Here are some example reviews for your reference. Look for `Package Review` in the conversation.
+
+-   R package reviews
+    -   [opentripplanner](https://github.com/ropensci/software-review/issues/295)
+    -   [mapscanner](https://github.com/ropensci/software-review/issues/330)
+-   Python package reviews
+    -   [MovingPandas](https://github.com/pyOpenSci/software-review/issues/18)
+    -   [erddapy](https://github.com/pyOpenSci/software-review/issues/1)
+
+Some more guidance when you write your reviews.
+
+-   Be concrete and specific: support your claims with evidence: provide an example or point to specific things when you write comments.
+
+-   Be empathetic: when you write feedback, try to put yourself at the receiving end and think about what feedback would have been useful for you.
+
+-   Be Constructive: Do not use evaluative or judgmental language; instead be constructive and help them build on their strengths.
+
+-   Tone: Don't be mean. A good test to determine whether you are being mean or not is putting yourself or a close friend at the receiving end or imagining whether you can say it to them in a face-to-face conversation.
+
+## Submission Instructions
+
+You will submit a PDF to Gradescope for this peer review that includes:
+
+1.  your GitHub.com username
+2.  the URL of to the issue containing your peer review (ideally linked to your post)

@@ -1,0 +1,97 @@
+---
+title: "Milestone 4"
+format:
+  html:
+    toc: true
+editor_options:
+  markdown:
+    wrap: none
+---
+
+## Milestone 4 summary
+
+In this milestone, you will:
+
+1.  Setup GitHub actions workflow for continuous integration
+2.  Setup GitHub actions workflow for continuous deployment
+3.  Choose a suitable license to your package and justify your choice
+4.  Address feedback to improve the package
+5.  Continue to manage issues professionally
+
+## Resources to help you on your way:
+
+-   [Python Packages book](https://py-pkgs.org/)
+-   [Pytest docs](https://docs.pytest.org/en/stable/)
+-   [`passwordler` Python package](https://github.com/UBC-MDS/passwordler)
+
+### 1. Setup GitHub actions workflow for continuous integration
+
+Setup GitHub Action workflows to check your packages:
+
+-   build
+-   test suite
+-   code style (optional)
+
+These workflows should run on every push to any branch. We highly recommend using the [`ci-cd.yml` file](https://github.com/py-pkgs/py-pkgs-cookiecutter/blob/main/%7B%7B%20cookiecutter.__package_slug%20%7D%7D/.github/workflows/ci-cd.yml) from the `py-pkgs-cookiecutter` repository.
+
+### 2. Setup GitHub actions workflow for continuous deployment
+
+Setup GitHub Action workflows so that the package is built and published to PyPI when pull requests are accepted to the main branch. The workflow should also use semantic versioning to automatically version the published releases. For Python we recommend using the [`ci-cd.yml` file](https://github.com/py-pkgs/py-pkgs-cookiecutter/blob/main/%7B%7B%20cookiecutter.__package_slug%20%7D%7D/.github/workflows/ci-cd.yml) from the `py-pkgs-cookiecutter` repository.
+
+### 3. Choose a suitable license to your package and justify your choice
+
+Examine the license for your project and consider whether this is the choice you want to make, or whether you want to change the license. Discuss and reason the license choice in an issue in your package repository. All team members should make meaningful contributions to this discussion in the GitHub issue.
+
+### 4. Address feedback to improve the project and communicate improvements to reviewers
+
+#### Address feedback:
+
+Revise your package to address feedback received from the DSCI 524 teaching team from past milestones, as well as feedback received from the peer review. 50% of your final grade for this milestone will be assessing whether you have addressed this feedback to improve your project.
+
+To help us easily, and correctly, assess this, please use create the commit messages that address the feedback something like this:
+
+```         
+fix: Feedback addressed by ...
+```
+
+Once your continuous development is setup, this will update the `CHANGELOG.md` automatically, and the TA's will be able to easily find the changes that addressed feedback.
+
+If you already made changes before you know to write commit messages this way, you can open an issue and list the changes there. If you do this, please add a link to this issue in the PDF you submit to Gradescope.
+
+You will be graded on a sliding scale for this, the more improvements you make, the higher your grade for this part of the milestone will be. The improvements should be at least one per team member, and they should significantly improve the project. This minimum could earn at most 37.5/50. To earn more, you need to exceed these minimum improvements.
+
+#### Communicate improvements to reviewers
+
+In the [UBC-MDS/software-review-2025](https://github.com/UBC-MDS/software-review-2025) 
+repository,
+thank your reviewers for their feedback 
+and let them know how their feedback led you to improve your package.
+Be specific when doing this, 
+including both narrative and links to commits where code, 
+test or documentation changes were made.
+
+### 5. Continue to manage issues professionally
+
+Continue managing issues effectively through project boards and milestones, make it clear who is responsible for what and what project milestone each task is associated with. In particular, create an issue for each function in the package. Each of these issues must be assigned to a single person on the team. We want all of you to get coding experience in the project and **each team member should be responsible for a package function.** So if you are a team of four, you'll be writing four functions for your package and if you are a team of three, you will be writing three functions for your package.
+
+## Submission Instructions
+
+Just before you submit the milestone 4, create a release on your project repository on GitHub and name it something that makes using your new knowledge from semantic versioning ([how to create a release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release)). This release allows us and you to easily jump to the state of your repository at the time of submission for grading purposes, while you continue to work on your project for the next milestone.
+
+You will submit a PDF to Gradescope for milestone 4 that includes:
+
+1.  the URL of your project's GitHub.com repository
+2.  the URL of a GitHub release of your project's project's GitHub.com repository
+3.  the URL of the GitHub issue where you discuss the license for your package
+
+## Expectations
+
+-   **Everyone should contribute equally to all aspects of the project** **(e.g., code, writing, project management).** **This should be evidenced by a roughly equal number of commits,** **pull request reviews and participation in communication via GitHub issues.**
+-   After the repository is set-up, each group member should work in a [GitHub flow workflow](https://docs.github.com/en/get-started/quickstart/github-flow); where they create branches for each feature or fix, which are reviewed and critiqued by at least one other teammate before the the pull request is accepted.
+-   You should be committing to git and pushing to GitHub.com every time you work on this project.
+-   Git commit messages should be meaningful. These will be marked. It's OK if one or two are less meaningful, but most should be.
+-   Use GitHub for project-related communication.
+    -   Use GitHub issues to communicate with team mates (as opposed to email or Slack).
+    -   Create project boards using GitHub and link tasks to issues.
+    -   Create GitHub milestones to group related issues. In particular, make a milestone for this milestone called `milestone1` and put all the relevant issues linked to it.
+-   Use proper grammar and full sentences throughout the project, especially in your `README`.

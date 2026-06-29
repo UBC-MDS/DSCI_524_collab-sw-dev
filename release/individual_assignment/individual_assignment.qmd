@@ -1,0 +1,18 @@
+---
+title: "Individual assignment"
+---
+
+## Package software in R and Python
+
+This assignment will provide practice packing software in both the R and Python languages. Specifically you will follow two tutorials to create toy/practice packages, one in each of the software languages. This will help prepare you to work on and complete your group project for this course.
+
+1.  Read through and follow the instructions in [How to package a Python](https://py-pkgs.org/03-how-to-package-a-python) to create a toy/practice package in the Python programming language. Note - you only need to publish your package to TestPyPI, not PyPI. Push all your work to GitHub.com in a repository under your personal username.
+
+2.  Read through and follow the instructions in [The Whole Game](https://r-pkgs.org/whole-game.html) to create a toy/practice package in the R programming language. Push all your work to GitHub.com in a repository under your personal username.
+
+## Submission Instructions
+
+You will submit a PDF to Gradescope for this individual assignment that includes:
+
+1.  the URL of the GitHub.com repository containing your toy/practice package in the Python programming language
+2.  the URL of the GitHub.com repository containing your toy/practice package in the R programming language

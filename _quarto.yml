@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Syllabus"
+        contents:
+          - index.qmd
+      - section: "Assessments"
+        contents:
+          - release/individual_assignment/individual_assignment.qmd
+          - release/milestone1/milestone1.qmd
+          - release/milestone2/milestone2.qmd
+          - release/milestone3/milestone3.qmd
+          - release/peer_review/peer_review.qmd
+          - release/milestone4/milestone4.qmd
+          - release/team_work/team_work.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor:
+  render-on-save: true
