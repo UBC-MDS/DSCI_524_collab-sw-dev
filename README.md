@@ -4,7 +4,7 @@ title: "Course website for DSCI 524: Collaborative Software Development"
 
 How to exploit practices from collaborative software development techniques in data scientific workflows. Appropriate use of the software life cycle, unit testing / continuous integration, and packaging for use by others.
 
-<https://pages.github.ubc.ca/mds-2024-25/DSCI_524_collab-sw-dev_students/>
+<https://pages.github.ubc.ca/mds-2024-25/DSCI_524_collab-sw-dev_students>
 
 Authors: Tiffany A. Timbers, Varada Koltahar, Florencia D'Andrea, Daniel Chen
 
