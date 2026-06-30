@@ -1,5 +1,6 @@
 ## Lecture 1:
 By the end of this lecture, students should be able to:
+
 - Create project boards using GitHub and link tasks to issues
 - Create GitHub milestones to group related issues
 - Set-up master branch protection on a GitHub repository
@@ -8,6 +9,7 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 2: 
 By the end of this lecture, students should be able to:
+
 - Explain the circumstances in which one should consider creating a package for their code
 - Name the key files and directories in both R & Python pacakges and describe the function of each
 - Given a function and a unit test written in R, use `devtools` and `usethis` to create a small and simple R package
@@ -16,6 +18,7 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 3: 
 By the end of this lecture, students should be able to:
+
 - Perform a code review that uses inline comments and suggested code fixes
 - Define the following 3 types of testing:
     - unit testing
@@ -28,6 +31,7 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 4:
 By the end of this lecture, students should be able to:
+
 - Define code, test and branch coverage. Explain why high coverage in each of these metrics is desired
 - Calculate code coverage in R and Python
 - Manage package dependencies in R and Python packages
@@ -37,6 +41,7 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 5:
 By the end of this lecture, students should be able to:
+
 - Define continuous integration testing
 - Explain why continuous integration testing is superior to manually running tests
 - Define the following key concepts that underlie GitHub Actions:
@@ -53,6 +58,7 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 6:
 By the end of this lecture, students should be able to:
+
 - Define continuous deployment
 - Explain why continuous deployment is superior to manually deploying software
 - Explain semantic versioning, and define what constitutes patch, minor, major and breaking changes
@@ -65,6 +71,7 @@ By the end of this lecture, students should be able to:
 
 ## Lecture 7:
 By the end of this lecture, students should be able to:
+
 - Explain the advantage of using of packages that have undergone peer review
 - List the rOpenSci and PyOpenSci organizations aims and goals
 - Describe the peer review process used by the rOpenSci and PyOpenSci organizations
@@ -72,6 +79,7 @@ By the end of this lecture, students should be able to:
 - Explain the philosophical difference between how CRAN and PyPI gatekeep pacakges, and how this impacts the packages that are found on each repository/index
 
 ## Lecture 8:
+
 By the end of this lecture, students should be able to:
 - Explain who owns the copyright of code they write in a give situation, and why
 - Choose an appropriate license for software (i.e., packages or analysis code)
